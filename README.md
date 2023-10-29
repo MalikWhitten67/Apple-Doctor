@@ -11,6 +11,18 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 3. React x Astro - server side rendering for fast cms
 4. Express x machine learning 4 kids api - for ai to frontend communication and model training
 
+
+## Running/Installing
+
+```bash
+npm i
+```
+
+```bash
+npm run dev
+```
+
+
 ## Dev Log
 
 1. Oct 28th: 
