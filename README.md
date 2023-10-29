@@ -1,54 +1,63 @@
-# Astro Starter Kit: Basics
+# Apple Doctor
 
-```sh
-npm create astro@latest -- --template basics
-```
+Apple doctor is an ai revolved app made to simplify self analysis - and workflow management,  communicating between doctors and patients
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+- Made by a mark cuban ai camp student.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Tech Stack
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+1. Pocketbase - used for persistent reflections between patient's and Doctor's
+2. Daisyui x Tailwindcss - css library making css easier and efficient.
+3. React x Astro - server side rendering for fast cms
+4. Express x machine learning 4 kids api - for ai to frontend communication and model training
 
-## 🚀 Project Structure
+## Dev Log
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Oct 28th: 
+   - Implemented Login / Register both as a patient and a doctor
+   - Started working on the dashboard
+   - Reworked Readme
+2. Oct 29th: Design layout refractoring - made  the ai navigatable / consistent and easy to use
+   - Doctors ui is seperate from user ui
+   - Messages page done - you can create chats by searching your doctor or vice versa
+     - realtime reflective messages work aswell
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Ai Api reference
+ 
+* GET -> https://expressjs.malikwhitten.repl.co/
+   - out: Status page
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+* POST -> https://expressjs.malikwhitten.repl.co/classify
+   - Body -> data:'text prompt'
+   - Out: -> Category/label /confidence
+
+* POST -> https://expressjs.malikwhitten.repl.co/train
+  - Body 
+    - label: 'label it belongs to',
+    - data: 'text to be used to best categorize a prompt'
+  - Out: 
+    - Success: has been added to the label
+
+
+## App api reference
+
+### Doctors
+
+Login: apple-doctor.pockethost.io/api/collections/doctors/auth-with-password
+  - Method: Post
+  - Returns: record auth data / error
+  - Expects -> password and email
+
+Register: Login: apple-doctor.pockethost.io/api/collections/doctors/auth-with-password
+   - Method: Post
+   - Returns: success message or error
+   - Expects: password, confirmedpassword name, email, boolean isDoctor
+
+
