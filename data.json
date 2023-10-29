@@ -1,0 +1,20 @@
+{
+    "training_data": [
+        {
+            "label": "concerning",
+            "data": []
+        },
+        {
+            "label": "illness",
+            "data": []
+        },
+        {
+            "label": "median",
+            "data": []
+        },
+        {
+            "label": "self_accessments",
+            "data": []
+        }
+    ]
+}
