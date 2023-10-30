@@ -39,6 +39,9 @@ npm run dev
      - Finished working on analysis output / analyzing for user dashboard
      - Reorganized / fixed dataset inconsistencies by using concise inputs
      - small bug fixes on backend
+     - Proper ui sizing for pc monitors
+     - Adding common symptoms to datasets for users to view - to get a general understanding of the disease/illness
+     - Adding suggestions - which can tell if a user can do it at home or if they should contact their doctor about the issue
 
 
 
