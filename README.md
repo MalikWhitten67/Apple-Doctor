@@ -27,6 +27,17 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 
 
 
+## Dataset layout
+
+* Disease/illness labeling
+   - Each disease or illness is labled  - so that the ai can categorize the symptoms to which you have
+* Symptoms array
+   - Common symptoms or possible symptoms that may match what you are feeling - this consists of short concise input prompts that best give you a correct output
+* severity
+   - Ranging between:
+      - Severe: you need to see a doctor asap
+      - Watch: keep in contact with a doctor and watch incase it worsens
+      - Mild: you can possibly take care of this at home with over the counter meds or just incase it gets worse stay in contact with a doctor
 
 
 
