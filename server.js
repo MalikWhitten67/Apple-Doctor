@@ -9,7 +9,7 @@ app.use(express.json());
 app.get('/', (req, res) => res.json({ status: 'online' }));
 
 let json = JSON.parse( fs.readFileSync('./data.json' , 'utf8'))
-let key = "9f458de0-76c3-11ee-9ee4-af9bcaa4af0b51d5f396-70ad-4615-86af-fe5a2c62d6d7"
+let key = ""
 let hastrained = false
 app.post('/train', (req, res) => {
 
