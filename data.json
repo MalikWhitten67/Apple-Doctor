@@ -1,20 +1,188 @@
 {
     "training_data": [
         {
-            "label": "concerning",
-            "data": []
+            "label": "COVID Pneumonia",
+            "description":"COVID pneumonia is a lung infection caused by SARS CoV-2, the virus that causes COVID-19. It causes fluid and inflammation in your lungs. ",
+            "symptoms": [
+                "dizziness and extreme fatigue",
+                "fever incredibly tired",
+                "Diarrhea runny nose stomache aches",
+                "sharp pains sore throat dry cough",
+                "difficulty with breathing",
+                "confusion chest pain tightness",
+                "blueish lips skin or nails cyanosis"
+            ],
+           "severity":"watch"
         },
         {
-            "label": "illness",
-            "data": []
+            "label": "AA Amyloidosis",
+            "description":"AA amyloidosis, or secondary amyloidosis, is one type of the rare disorder amyloidosis. This disorder happens when proteins in your body mutate, changing form and gathering on your organs and tissues. ",
+            "symptoms": [
+                "swollen feet or legs",
+                "foamy frothy pee",
+                "peeing less than normal",
+                "chronic diarrhea",
+                "enlarged kidney",
+                "low blood pressure",
+                "nausea and vomiting."
+            ],
+            "severity": "severe"
         },
         {
-            "label": "median",
-            "data": []
+            "label": "Alpers Disease",
+          "description":"Alpers disease is a rare genetic disorder that leads to dementia, liver failure and seizures. Symptoms usually start between ages 2 and 4 or ages 17 and 24. ",
+            "symptoms": [
+                "anxiety and depression",
+                "brain disease encephalopathy",
+                "hypoglycemia low blood sugar.",
+                "lack of growth",
+                "migraine headaches and hallucinations",
+                "muscle stiffness spasticity",
+                "muscle twitching",
+                "dementia",
+                "loss of controll over arms and legs"
+            ],
+            "severity": "severe"
         },
         {
-            "label": "self_accessments",
-            "data": []
-        }
+            "label": "Alergies",
+            "description":"Allergies are your body’s reaction to normally harmless substances.",
+            "symptoms": [
+                "sneezing",
+                "runny blocked nose",
+                "red itchy twitching eye",
+                "wheezing or coughing",
+                "worsening of asthma or eczema symptoms",
+                "hives swelling around your mouth",
+                "itchy all over your body or a specfic part of your body"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "Abdominal Aortic Aneurysm",
+            "description":"An abdominal aortic aneurysm (AAA) is a bulge in the part of your aorta that runs through your belly.",
+            "symptoms": [
+                "severe pain near belly button or lower legs",
+                "shortness of breath",
+                "fast heartbeat",
+                "low blood pressure",
+                "dizziness or fainting",
+                "nausea  or vommiting",
+                "clammy sweaty hands"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Aphasia",
+            "description":"Aphasia is a brain disorder where a person has trouble speaking or understanding other people speaking.",
+            "symptoms": [
+                "problems with understanding",
+                "struggles with repition",
+                "loss of fluency"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "Abdominal Migraine",
+            "description":"Abdominal migraine is a condition that causes episodes of moderate to severe abdominal (belly) pain lasting one to 72 hours. ",
+            "symptoms": [
+                "pale appearance",
+                "loss of apetite",
+                "vomiting",
+                "headache episodes"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Aphonia (Loss of Voice)",
+            "description":"Inability to speak clearly low tone."
+            "symptoms": [
+                "loss of voice",
+                "low tone unable to be heard"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Alzheimer's Disease",
+            "description":"Alzheimer’s disease causes a decline in memory, thinking, learning and organizing skills over time. ",
+            "symptoms": [
+                "loss of memory",
+                "unable to do certain tasks effectively",
+                "zhoning out when asked a question",
+                "loss of speech"
+            ],
+            "severity": "watch"
+        },
+      {
+        "label":"Biliary Stricture",
+        "description":"Biliary strictures, also called bile duct strictures, occur when the ducts that carry bile from your liver to your small intestine become narrow or blocked. ",
+        "symptoms":[
+          "abdominal pain upper right side",
+          "fever and chills",
+          "changes in stool poop color gray pale colors",
+          "itchy skin",
+          "loss of apetite",
+          "jaundice nausea and vomiting"
+        ],
+        "severity":"severe"
+      },
+      {
+        "label":"Bacteremia",
+        "description":"Bacteremia is when you have bacteria in your blood",
+        "symptoms":[
+          "chills",
+          "fast heart rate tachycardia",
+          "low blood pressure hypotension",
+          "abdominal pain nausea and vommiting",
+          "diarrhea",
+          "rapid breathing hyperventilation."
+        ],
+        "severity":"severe"
+      },
+      {
+        "label":"Broken Ankle",
+        "description":"Broken ankles, or ankle fractures, are one of the most common causes of ankle pain.",
+        "symptoms":["severe pain in your ankle", "pain in ankle", "hurts when touching ankle", "bruised or swollen ankle"],
+        "severity":"severe"
+      },
+      {
+        "label":"Broken Femur",
+        "description":"A broken femur is a serious injury that requires immediate medical care. Broken femurs are treated with surgery and physical therapy.",
+        "symptoms":["severe pain", "cannot put weight on injured leg", "peices of femur break through skin and cause bleeding", 
+          "bruised thigh","parts of the thigh is swollen", "injured leg is shorter then uninjured leg"
+        ],
+        "severity":"severe"
+      },
+      {
+        "label":"Barth Syndrome",
+        "description":"Barth syndrome is a rare genetic condition that causes severe health issues. It typically affects boys. The condition occurs when a gene mutation affects the body’s ability to support cells’ energy-producing capabilities.",
+        "symptoms":["Uusually high levels of an organic acid in the urine", 
+          "cannot put weight on injured leg", 
+          "enlargement of the heart’s lower chambers", 
+          "frequent bacterial infections.", 
+          "injured leg is shorter then uninjured leg",
+          "Growth delays.",
+          "Heart muscle weakness",
+          "Prominent cheek",
+          "Weakness in the muscles that help you move skeletal myopathy"
+        ],
+        "severity":"severe"
+      },
+      {
+        "label":"Bloated Stomache",
+        "description":"A bloated stomach feels tight, full and often painful. You might feel bloated even if you don’t have a distended abdomen.",
+        "symptoms":["Uusually high levels of an organic acid in the urine", 
+          "cannot put weight on injured leg", 
+          "enlargement of the heart’s lower chambers", 
+          "frequent bacterial infections.", 
+          "injured leg is shorter then uninjured leg",
+          "Growth delays.",
+          "Heart muscle weakness",
+          "Prominent cheek",
+          "Weakness in the muscles that help you move skeletal myopathy"
+        ],
+        "severity":"severe"
+      }
+      
     ]
 }
