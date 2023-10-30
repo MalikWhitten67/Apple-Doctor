@@ -27,6 +27,7 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
    - Dataset / returned optimization
        - Optimized ai backend api to better give an answer based on median confidency rating
  
+ 
 ## Dataset layout
 
 * Disease/illness labeling
@@ -42,7 +43,10 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
     - Some illnesses / diseases have images - this is just used to better understand what they may have
 
 * Suggestions
-    - These are tips at what action you should take depending on how severe the illness/disease is.  
+    - These are tips at what action you should take depending on how severe the illness/disease is.
+      
+* Common Symptoms
+    - This is a list of symptoms that are prevalent to the illness/disease - this is for the frontend
 
 
 ## Ai Api reference
