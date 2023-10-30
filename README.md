@@ -38,7 +38,11 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
       - Severe: you need to see a doctor asap
       - Watch: keep in contact with a doctor and watch incase it worsens
       - Mild: you can possibly take care of this at home with over the counter meds or just incase it gets worse stay in contact with a doctor
+* Image
+    - Some illnesses / diseases have images - this is just used to better understand what they may have
 
+* Suggestions
+    - These are tips at what action you should take depending on how severe the illness/disease is.  
 
 
 ## Ai Api reference
