@@ -34,7 +34,7 @@ npm run dev
    - Messages page done - you can create chats by searching your doctor or vice versa
      - realtime reflective messages work aswell
      - grabbing useful data for accessments - analyzing data from reputable sources and making useful prompts to better get a quality answer.
-     - Optimizing ai backend api to better give an answer based on median confidency rating
+     - Optimized ai backend api to better give an answer based on median confidency rating
 
 
 
