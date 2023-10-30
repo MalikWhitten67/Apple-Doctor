@@ -6,7 +6,7 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 
 ### Tech Stack
 
-1. Pocketbase - used for persistent reflections between patient's and Doctor's
+1. [Pocketbase](https://pocketbase.com)- used for persistent reflections between patient's and Doctor's
 2. Daisyui x Tailwindcss - css library making css easier and efficient.
 3. React x Astro - server side rendering for fast cms
 4. Express x machine learning 4 kids api - for ai to frontend communication and model training
