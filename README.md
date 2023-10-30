@@ -10,7 +10,7 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 2. Daisyui x Tailwindcss - css library making css easier and efficient.
 3. React x Astro - server side rendering for fast cms
 4. Express x machine learning 4 kids api - for ai to frontend communication and model training
-
+5. Data For diseases and illnesses: https://my.clevelandclinic.org
 ## Dev Log
 
 1. Oct 28th: 
@@ -21,7 +21,7 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
    - Doctors ui is seperate from user ui
    - Messages page done - you can create chats by searching your doctor or vice versa
      - realtime reflective messages work aswell
-
+     - grabbing useful data for accessments - analyzing data from reputable sources and making useful prompts to better get a quality answer.
 
 
 
