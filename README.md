@@ -11,6 +11,7 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 3. React x Astro - server side rendering for fast cms
 4. Express x machine learning 4 kids api - for ai to frontend communication and model training
 5. Data For diseases and illnesses: https://my.clevelandclinic.org
+
 ## Dev Log
 
 1. Oct 28th: 
@@ -23,10 +24,9 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
      - realtime reflective messages work aswell
    - Structuring of dataset for training
        - Grabbed 5 diseases or illnesses from a-z - writing severity level and using concice prompts
-
-
-
-
+   - Dataset / returned optimization
+       - Optimized ai backend api to better give an answer based on median confidency rating
+ 
 ## Dataset layout
 
 * Disease/illness labeling
@@ -48,7 +48,7 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 
 * POST -> https://expressjs.malikwhitten.repl.co/classify
    - Body -> data:'text prompt'
-   - Out: -> Category/label /confidence
+   - Out: -> Category/label /confidence / description
 
 * POST -> https://expressjs.malikwhitten.repl.co/train
   - Body 
