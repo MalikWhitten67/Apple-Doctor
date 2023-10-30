@@ -2,7 +2,11 @@
     "training_data": [
         {
             "label": "COVID_Pneumonia",
+            "name": "",
+            "image": "https://images.unsplash.com/photo-1584118624012-df056829fbd0?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "description": "COVID pneumonia is a lung infection caused by SARS CoV-2, the virus that causes COVID-19. It causes fluid and inflammation in your lungs. ",
+            "suggestion": "Submit the assessment to your doctor through the app or by downloading it if you experience symptoms like fever, cough, or breathing difficulties, or if you've had close contact with someone with COVID-19.",
+            "common_symptoms": "Dizziness, extreme, fatigue, fever or very tired, sore throat, difficulty with breathing",
             "symptoms": [
                 "dizziness and extreme fatigue",
                 "fever incredibly tired",
@@ -12,13 +16,16 @@
                 "dry cough",
                 "difficulty with breathing",
                 "confusion chest pain tightness",
-                "blueish lips skin or nails cyanosis"
+                "blueish lips skin or nails cyanosis",
+                "loss of taste"
             ],
             "severity": "watch"
         },
         {
             "label": "AA_Amyloidosis",
             "description": "AA amyloidosis, or secondary amyloidosis, is one type of the rare disorder amyloidosis. This disorder happens when proteins in your body mutate, changing form and gathering on your organs and tissues. ",
+            "suggestion": "Download the assessment and reach out to your doctor to explore treatment options.",
+            "common_symptoms": "Swollen feet or legs,  foamy frothy pee, chronic diarrhea, low blood pressure",
             "symptoms": [
                 "swollen feet or legs",
                 "foamy frothy pee",
@@ -32,7 +39,10 @@
         },
         {
             "label": "Alpers_Disease",
+            "image": "https://s3.amazonaws.com/HMP/c360/imported/inline-images/2003C360_Alpers_1.png",
+            "suggestion": "Please obtain the assessment and reach out to your physician to explore potential treatment options.",
             "description": "Alpers disease is a rare genetic disorder that leads to dementia, liver failure and seizures. Symptoms usually start between ages 2 and 4 or ages 17 and 24. ",
+            "common_symptoms": "Anxiety and depression, brain disease (encephalopathy),  (hypoglycemia) low blood sugar, lack of growth, migraine headaches and hallucinations",
             "symptoms": [
                 "anxiety and depression",
                 "brain disease encephalopathy",
@@ -47,12 +57,18 @@
             "severity": "severe"
         },
         {
-            "label": "Alergies",
+            "label": "Allergies",
+            "image": "https://images.unsplash.com/photo-1610021684483-b06bf8ed5a41?auto=format&fit=crop&q=80&w=2671&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "If symptoms worsen beyond the usual, get in touch with your doctor. You can manage this condition at home using over-the-counter remedies.",
             "description": "Allergies are your body’s reaction to normally harmless substances.",
+            "common_symptoms": "sneezing consistently, runny blocked nose, red itchy eyes, sore throat, wheezing or coughing, swelling and hives around the mouth.",
             "symptoms": [
                 "sneezing",
+                "heavy consistent sneezing",
                 "runny blocked nose",
                 "red itchy twitching eye",
+                "sore throat hurts to swallow",
+                "burning feeling in throat",
                 "wheezing or coughing",
                 "worsening of asthma or eczema symptoms",
                 "hives swelling around your mouth",
@@ -62,7 +78,10 @@
         },
         {
             "label": "Abdominal_Aortic_Aneurysm",
+            "image": "https://1.bp.blogspot.com/-O1jR5z0xgrM/XQUcZdept6I/AAAAAAAAEPI/woQtwuPjl2gOw-Ei5VEXrh6VRjNDwLL3wCLcBGAs/s1600/id005_cellulitis_img1_au.large.jpg",
+            "suggestion": "We advise reaching out to your doctor, providing them with the assessment, and exploring the possibility of undergoing a screening.",
             "description": "An abdominal aortic aneurysm (AAA) is a bulge in the part of your aorta that runs through your belly.",
+            "common_symptoms": "fever, cough headache, low blood pressure, dizziness or fainting, nausea or vommiting",
             "symptoms": [
                 "severe pain near belly button or lower legs",
                 "shortness of breath",
@@ -76,17 +95,25 @@
         },
         {
             "label": "Aphasia",
+            "image": "https://th.bing.com/th/id/OIP.u_-LVit-cE0TszM_yO-KlgHaFW?pid=ImgDet&rs=1",
             "description": "Aphasia is a brain disorder where a person has trouble speaking or understanding other people speaking.",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment for the underlying condition.",
+            "common_symptoms": "problems with understanding, struggles with repition, loss of fluency, struggling to do basic tasks, low thinking capibilities ",
             "symptoms": [
                 "problems with understanding",
                 "struggles with repition",
-                "loss of fluency"
+                "loss of fluency",
+                "struggling to do basic tasks with zero complexity",
+                "low thinking capibilities"
             ],
             "severity": "watch"
         },
         {
             "label": "Abdominal_Migraine",
+            "image": "https://th.bing.com/th/id/OIP.zzOf0oisUczZxVXnVdVQEgHaE8?pid=ImgDet&rs=1",
             "description": "Abdominal migraine is a condition that causes episodes of moderate to severe abdominal (belly) pain lasting one to 72 hours. ",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment if lasts more than 72 hours",
+            "common_symptoms": "pale like appearance, loss of apetite, vomiting, headache episodes",
             "symptoms": [
                 "pale appearance",
                 "loss of apetite",
@@ -97,16 +124,23 @@
         },
         {
             "label": "Aphonia_Loss_of_Voice",
+            "image": "https://i3.wp.com/static.tuasaude.com/media/article/ci/wg/afonia_40221_l.jpg",
+            "suggestion": "This illness is mild and can be self-assessed. If it worsens, consider consulting your doctor and try drinking hot liquids like tea.",
             "description": "Inability to speak clearly low tone.",
+            "common_symptoms": "loss of voice, low tone unable to be heard, dry raspy throat feeling",
             "symptoms": [
                 "loss of voice",
-                "low tone unable to be heard"
+                "low tone unable to be heard",
+                "dry raspy throat feeling"
             ],
             "severity": "mild"
         },
         {
             "label": "Alzheimer's_Disease",
+            "image": "https://img.huffingtonpost.com/asset/58404fb21a00002500ccab45.jpeg?ops=1910_1000",
             "description": "Alzheimer’s disease causes a decline in memory, thinking, learning and organizing skills over time. ",
+            "suggestions": "Monitor the illness keep contact with your doctor and try exercises to help fix which symptoms are prevalent",
+            "common_symptoms": "loss of memory, unable to complete specific tasks, zhoning out, loss of speech",
             "symptoms": [
                 "loss of memory",
                 "unable to do certain tasks effectively",
@@ -118,8 +152,10 @@
         {
             "label": "Biliary_Stricture",
             "description": "Biliary strictures, also called bile duct strictures, occur when the ducts that carry bile from your liver to your small intestine become narrow or blocked. ",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment",
+            "common_symptoms": "abdominal pain upper right side, fever and chills, changes in stool color, itchy skin, loss of apetite, nausea and vommiting",
             "symptoms": [
-                "abdominal pain upper right side",
+                "abdominal pain upper right side, fever and chills, changes in stool poop color gray pale colors, itchy skin, loss of apetite, nausea and vomiting",
                 "fever and chills",
                 "changes in stool poop color gray pale colors",
                 "itchy skin",
@@ -130,7 +166,10 @@
         },
         {
             "label": "Bacteremia",
+            "image": "https://th.bing.com/th/id/OIP.w5ABNFYTYt4WlBBbVdayYgHaE7?pid=ImgDet&rs=1",
             "description": "Bacteremia is when you have bacteria in your blood",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment",
+            "common_symptoms": "chills, fast heart rate (tachycardia), diarrhea, rapid breathing and hyperventilation",
             "symptoms": [
                 "chills",
                 "fast heart rate tachycardia",
@@ -143,7 +182,10 @@
         },
         {
             "label": "Broken_Ankle",
+            "image": "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?auto=format&fit=crop&q=80&w=2096&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "Maintain minimal pressure on the ankle, and consult your doctor for treatment.",
             "description": "Broken ankles, or ankle fractures, are one of the most common causes of ankle pain.",
+            "common_symptoms": "sever pain, hurts when touching, bruised or swollen",
             "symptoms": [
                 "severe pain in your ankle",
                 "hurts when touching ankle",
@@ -154,6 +196,7 @@
         {
             "label": "Broken_Femur",
             "description": "A broken femur is a serious injury that requires immediate medical care. Broken femurs are treated with surgery and physical therapy.",
+            "common_symptoms": "severe pain, cannot put weight on injured leg, peices of femur break skin causing bleeding, parts of the thigh are swollen, injured leg is shorter than the uninjured leg.",
             "symptoms": [
                 "severe pain",
                 "cannot put weight on injured leg",
@@ -165,42 +208,63 @@
             "severity": "severe"
         },
         {
-            "label": "Barth_Syndrome",
-            "description": "Barth syndrome is a rare genetic condition that causes severe health issues. It typically affects boys. The condition occurs when a gene mutation affects the body’s ability to support cells’ energy-producing capabilities.",
-            "symptoms": [
-                "Unsually high levels of an organic acid in the urine",
-                "cannot put weight on injured leg",
-                "enlargement of the heart’s lower chambers",
-                "frequent bacterial infections.",
-                "injured leg is shorter then uninjured leg",
-                "Growth delays.",
-                "Heart muscle weakness",
-                "Prominent cheek",
-                "Weakness in the muscles that help you move skeletal myopathy"
-            ],
-            "severity": "severe"
-        },
-        {
             "label": "Bloated_Stomache",
+            "image": "https://images.unsplash.com/photo-1625851623647-0dcf2911b563?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "The duration for it to subside can range from a few hours to a maximum of two days, depending on the amount of liquids or foods consumed.",
             "description": "A bloated stomach feels tight, full and often painful. You might feel bloated even if you don’t have a distended abdomen.",
+            "common_symptoms": "full stomach inable to do tasks properly, cramps, hurts when moving, feeling like you are going to throwup, constant runs to the bathroom",
             "symptoms": [
                 "full stomach inable to partake in tasks properly",
-                "stomach cramps",
-                "stomach hurts when moving",
-                "feeling like you are going to vomit"
+                "stomach cramps from eating",
+                "stomach hurts when moving after eating a big meal",
+                "feeling like you are going to vomit",
+                "constant runs to the bathroom"
             ],
-            "severity": "severe"
+            "severity": "mild"
         },
-      {
-          "label": "Sprained_Ankle",
-          "description": "A sprained ankle is a common injury that occurs when the ankle ligaments are torn or stretched too far, often after a fall, or if you roll or twist your ankle.",
-          "symptoms": [
-              "miled pain  when applying pressure to affected area of the ankle",
-              "tender to touch very sensitive",
-              "swelling bruising",
-              "difficulty when trying to walk"
-          ],
-          "severity": "mild"
-      }
+        {
+            "label": "Sprained_Ankle",
+            "image": "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?auto=format&fit=crop&q=80&w=2096&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "To alleviate pressure on the injured ankle, consider wearing a compression sock if you must work or engage in activities. Swelling and discomfort should subside within a few hours.",
+            "description": "A sprained ankle is a common injury that occurs when the ankle ligaments are torn or stretched too far, often after a fall, or if you roll or twist your ankle.",
+            "common_symptoms": "mild pain when putting pressure on ankle, tender to touch, swelling and bruising, difficulty when walking",
+            "symptoms": [
+                "mild pain  when applying pressure to affected area of the ankle",
+                "tender to touch very sensitive",
+                "swelling bruising",
+                "difficulty when trying to walk"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Common_Cold",
+            "image": "https://images.unsplash.com/photo-1516126491303-6f54240c8491?auto=format&fit=crop&q=80&w=1965&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "The common cold is an infection of your nose, sinuses, throat and windpipe. Colds spread easily, especially within homes, classrooms and workplaces.",
+            "suggestion": "If it persists for more than a week or 10 days, get in touch with your doctor to discuss potential treatment options.",
+            "common_symptoms": "sneezing and runny nose, nasal congestion, hoarsness coughing, fever, body aches, fatigue, headache, chills",
+            "symptoms": [
+                "sneezing and runy nose",
+                "stuff nose hard to breath in one side changes to the other side nasal congestion",
+                "hoarseness coughing",
+                "fever body aches fatigue",
+                "headache chills"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Flu",
+            "image": "https://images.unsplash.com/photo-1576765608360-c3fc79ca9964?auto=format&fit=crop&q=80&w=1877&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "Stay in touch with your doctor and follow home remedies, prioritize rest, and avoid outdoor activities.",
+            "description": "A contagious respiratory illness caused by influenza viruses that infect the nose, throat, and lungs.",
+            "common_symptoms": "fever, headache, severe dry cough, intense pain and fatigue, overheating",
+            "symptoms": [
+                "fever body is 100degrees",
+                "overheating",
+                "headache",
+                "intense pain and fatigue",
+                "severe dry cough"
+            ],
+            "severity": "watch"
+        }
     ]
 }
