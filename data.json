@@ -1,22 +1,24 @@
 {
     "training_data": [
         {
-            "label": "COVID Pneumonia",
-            "description":"COVID pneumonia is a lung infection caused by SARS CoV-2, the virus that causes COVID-19. It causes fluid and inflammation in your lungs. ",
+            "label": "COVID_Pneumonia",
+            "description": "COVID pneumonia is a lung infection caused by SARS CoV-2, the virus that causes COVID-19. It causes fluid and inflammation in your lungs. ",
             "symptoms": [
                 "dizziness and extreme fatigue",
                 "fever incredibly tired",
                 "Diarrhea runny nose stomache aches",
-                "sharp pains sore throat dry cough",
+                "sharp pains",
+                "sore throat",
+                "dry cough",
                 "difficulty with breathing",
                 "confusion chest pain tightness",
                 "blueish lips skin or nails cyanosis"
             ],
-           "severity":"watch"
+            "severity": "watch"
         },
         {
-            "label": "AA Amyloidosis",
-            "description":"AA amyloidosis, or secondary amyloidosis, is one type of the rare disorder amyloidosis. This disorder happens when proteins in your body mutate, changing form and gathering on your organs and tissues. ",
+            "label": "AA_Amyloidosis",
+            "description": "AA amyloidosis, or secondary amyloidosis, is one type of the rare disorder amyloidosis. This disorder happens when proteins in your body mutate, changing form and gathering on your organs and tissues. ",
             "symptoms": [
                 "swollen feet or legs",
                 "foamy frothy pee",
@@ -29,8 +31,8 @@
             "severity": "severe"
         },
         {
-            "label": "Alpers Disease",
-          "description":"Alpers disease is a rare genetic disorder that leads to dementia, liver failure and seizures. Symptoms usually start between ages 2 and 4 or ages 17 and 24. ",
+            "label": "Alpers_Disease",
+            "description": "Alpers disease is a rare genetic disorder that leads to dementia, liver failure and seizures. Symptoms usually start between ages 2 and 4 or ages 17 and 24. ",
             "symptoms": [
                 "anxiety and depression",
                 "brain disease encephalopathy",
@@ -46,7 +48,7 @@
         },
         {
             "label": "Alergies",
-            "description":"Allergies are your body’s reaction to normally harmless substances.",
+            "description": "Allergies are your body’s reaction to normally harmless substances.",
             "symptoms": [
                 "sneezing",
                 "runny blocked nose",
@@ -59,8 +61,8 @@
             "severity": "watch"
         },
         {
-            "label": "Abdominal Aortic Aneurysm",
-            "description":"An abdominal aortic aneurysm (AAA) is a bulge in the part of your aorta that runs through your belly.",
+            "label": "Abdominal_Aortic_Aneurysm",
+            "description": "An abdominal aortic aneurysm (AAA) is a bulge in the part of your aorta that runs through your belly.",
             "symptoms": [
                 "severe pain near belly button or lower legs",
                 "shortness of breath",
@@ -74,7 +76,7 @@
         },
         {
             "label": "Aphasia",
-            "description":"Aphasia is a brain disorder where a person has trouble speaking or understanding other people speaking.",
+            "description": "Aphasia is a brain disorder where a person has trouble speaking or understanding other people speaking.",
             "symptoms": [
                 "problems with understanding",
                 "struggles with repition",
@@ -83,8 +85,8 @@
             "severity": "watch"
         },
         {
-            "label": "Abdominal Migraine",
-            "description":"Abdominal migraine is a condition that causes episodes of moderate to severe abdominal (belly) pain lasting one to 72 hours. ",
+            "label": "Abdominal_Migraine",
+            "description": "Abdominal migraine is a condition that causes episodes of moderate to severe abdominal (belly) pain lasting one to 72 hours. ",
             "symptoms": [
                 "pale appearance",
                 "loss of apetite",
@@ -94,8 +96,8 @@
             "severity": "mild"
         },
         {
-            "label": "Aphonia (Loss of Voice)",
-            "description":"Inability to speak clearly low tone."
+            "label": "Aphonia_Loss_of_Voice",
+            "description": "Inability to speak clearly low tone.",
             "symptoms": [
                 "loss of voice",
                 "low tone unable to be heard"
@@ -103,8 +105,8 @@
             "severity": "mild"
         },
         {
-            "label": "Alzheimer's Disease",
-            "description":"Alzheimer’s disease causes a decline in memory, thinking, learning and organizing skills over time. ",
+            "label": "Alzheimer's_Disease",
+            "description": "Alzheimer’s disease causes a decline in memory, thinking, learning and organizing skills over time. ",
             "symptoms": [
                 "loss of memory",
                 "unable to do certain tasks effectively",
@@ -113,76 +115,92 @@
             ],
             "severity": "watch"
         },
+        {
+            "label": "Biliary_Stricture",
+            "description": "Biliary strictures, also called bile duct strictures, occur when the ducts that carry bile from your liver to your small intestine become narrow or blocked. ",
+            "symptoms": [
+                "abdominal pain upper right side",
+                "fever and chills",
+                "changes in stool poop color gray pale colors",
+                "itchy skin",
+                "loss of apetite",
+                "jaundice nausea   vomiting"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Bacteremia",
+            "description": "Bacteremia is when you have bacteria in your blood",
+            "symptoms": [
+                "chills",
+                "fast heart rate tachycardia",
+                "low blood pressure hypotension",
+                "abdominal pain nausea and vommiting",
+                "diarrhea",
+                "rapid breathing hyperventilation."
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Broken_Ankle",
+            "description": "Broken ankles, or ankle fractures, are one of the most common causes of ankle pain.",
+            "symptoms": [
+                "severe pain in your ankle",
+                "hurts when touching ankle",
+                "bruised or swollen ankle"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Broken_Femur",
+            "description": "A broken femur is a serious injury that requires immediate medical care. Broken femurs are treated with surgery and physical therapy.",
+            "symptoms": [
+                "severe pain",
+                "cannot put weight on injured leg",
+                "peices of femur break through skin and cause bleeding",
+                "bruised thigh",
+                "parts of the thigh is swollen",
+                "injured leg is shorter then uninjured leg"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Barth_Syndrome",
+            "description": "Barth syndrome is a rare genetic condition that causes severe health issues. It typically affects boys. The condition occurs when a gene mutation affects the body’s ability to support cells’ energy-producing capabilities.",
+            "symptoms": [
+                "Unsually high levels of an organic acid in the urine",
+                "cannot put weight on injured leg",
+                "enlargement of the heart’s lower chambers",
+                "frequent bacterial infections.",
+                "injured leg is shorter then uninjured leg",
+                "Growth delays.",
+                "Heart muscle weakness",
+                "Prominent cheek",
+                "Weakness in the muscles that help you move skeletal myopathy"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Bloated_Stomache",
+            "description": "A bloated stomach feels tight, full and often painful. You might feel bloated even if you don’t have a distended abdomen.",
+            "symptoms": [
+                "full stomach inable to partake in tasks properly",
+                "stomach cramps",
+                "stomach hurts when moving",
+                "feeling like you are going to vomit"
+            ],
+            "severity": "severe"
+        },
       {
-        "label":"Biliary Stricture",
-        "description":"Biliary strictures, also called bile duct strictures, occur when the ducts that carry bile from your liver to your small intestine become narrow or blocked. ",
-        "symptoms":[
-          "abdominal pain upper right side",
-          "fever and chills",
-          "changes in stool poop color gray pale colors",
-          "itchy skin",
-          "loss of apetite",
-          "jaundice nausea and vomiting"
-        ],
-        "severity":"severe"
-      },
-      {
-        "label":"Bacteremia",
-        "description":"Bacteremia is when you have bacteria in your blood",
-        "symptoms":[
-          "chills",
-          "fast heart rate tachycardia",
-          "low blood pressure hypotension",
-          "abdominal pain nausea and vommiting",
-          "diarrhea",
-          "rapid breathing hyperventilation."
-        ],
-        "severity":"severe"
-      },
-      {
-        "label":"Broken Ankle",
-        "description":"Broken ankles, or ankle fractures, are one of the most common causes of ankle pain.",
-        "symptoms":["severe pain in your ankle", "pain in ankle", "hurts when touching ankle", "bruised or swollen ankle"],
-        "severity":"severe"
-      },
-      {
-        "label":"Broken Femur",
-        "description":"A broken femur is a serious injury that requires immediate medical care. Broken femurs are treated with surgery and physical therapy.",
-        "symptoms":["severe pain", "cannot put weight on injured leg", "peices of femur break through skin and cause bleeding", 
-          "bruised thigh","parts of the thigh is swollen", "injured leg is shorter then uninjured leg"
-        ],
-        "severity":"severe"
-      },
-      {
-        "label":"Barth Syndrome",
-        "description":"Barth syndrome is a rare genetic condition that causes severe health issues. It typically affects boys. The condition occurs when a gene mutation affects the body’s ability to support cells’ energy-producing capabilities.",
-        "symptoms":["Uusually high levels of an organic acid in the urine", 
-          "cannot put weight on injured leg", 
-          "enlargement of the heart’s lower chambers", 
-          "frequent bacterial infections.", 
-          "injured leg is shorter then uninjured leg",
-          "Growth delays.",
-          "Heart muscle weakness",
-          "Prominent cheek",
-          "Weakness in the muscles that help you move skeletal myopathy"
-        ],
-        "severity":"severe"
-      },
-      {
-        "label":"Bloated Stomache",
-        "description":"A bloated stomach feels tight, full and often painful. You might feel bloated even if you don’t have a distended abdomen.",
-        "symptoms":["Uusually high levels of an organic acid in the urine", 
-          "cannot put weight on injured leg", 
-          "enlargement of the heart’s lower chambers", 
-          "frequent bacterial infections.", 
-          "injured leg is shorter then uninjured leg",
-          "Growth delays.",
-          "Heart muscle weakness",
-          "Prominent cheek",
-          "Weakness in the muscles that help you move skeletal myopathy"
-        ],
-        "severity":"severe"
+          "label": "Sprained_Ankle",
+          "description": "A sprained ankle is a common injury that occurs when the ankle ligaments are torn or stretched too far, often after a fall, or if you roll or twist your ankle.",
+          "symptoms": [
+              "miled pain  when applying pressure to affected area of the ankle",
+              "tender to touch very sensitive",
+              "swelling bruising",
+              "difficulty when trying to walk"
+          ],
+          "severity": "mild"
       }
-      
     ]
 }
