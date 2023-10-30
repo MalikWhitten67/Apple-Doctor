@@ -21,7 +21,8 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
    - Doctors ui is seperate from user ui
    - Messages page done - you can create chats by searching your doctor or vice versa
      - realtime reflective messages work aswell
-     - grabbing useful data for accessments - analyzing data from reputable sources and making useful prompts to better get a quality answer.
+   - Structuring of dataset for training
+       - Grabbing 5 diseases or illnesses from a-z - writing severity level and using concice prompts
 
 
 
