@@ -35,6 +35,11 @@ npm run dev
      - realtime reflective messages work aswell
      - grabbing useful data for accessments - analyzing data from reputable sources and making useful prompts to better get a quality answer.
      - Optimized ai backend api to better give an answer based on median confidency rating
+3. Oct 30th:
+     - Finished working on analysis output / analyzing for user dashboard
+     - Reorganized / fixed dataset inconsistencies by using concise inputs
+     - small bug fixes on backend
+
 
 
 
