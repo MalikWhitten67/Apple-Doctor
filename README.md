@@ -23,7 +23,7 @@ npm run dev
 ```
 
 
-## Dev Log
+# Dev Log
 
 1. Oct 28th: 
    - Implemented Login / Register both as a patient and a doctor
@@ -33,7 +33,8 @@ npm run dev
    - Doctors ui is seperate from user ui
    - Messages page done - you can create chats by searching your doctor or vice versa
      - realtime reflective messages work aswell
-
+     - grabbing useful data for accessments - analyzing data from reputable sources and making useful prompts to better get a quality answer.
+     - Optimizing ai backend api to better give an answer based on median confidency rating
 
 
 
