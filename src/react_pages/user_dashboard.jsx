@@ -146,7 +146,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <dialog ref={outputRef} className="modal modal-open  ">
+      <dialog ref={outputRef} className="modal    ">
         <div className=" bg-white   xl:modal-box lg:modal-box   p-5 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
           <div className="flex flex-row hero   justify-between">
             <svg
