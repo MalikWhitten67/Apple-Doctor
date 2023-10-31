@@ -79,4 +79,5 @@ npm i
      - Cleaned the ui for pc users
      - Made it so you cannot create duplicated chats
      - Added chat deletion option - and send to doctor button works
+     - Added bulk label updates allowing you to append data to multiple labels from the dataset all at once and auto train the model
 
