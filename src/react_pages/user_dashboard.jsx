@@ -217,7 +217,7 @@ export default function Dashboard() {
               <div className="  mt-8 flex flex-col gap-2">
                 <div className="flex flex-col ">
                   <h2 className="card-title capitalize  flex">
-                    Linked illness or Disease: {ai_output?.illness_or_disease}
+                    Iillness or Disease: {ai_output?.illness_or_disease}
                   </h2>
                   {ai_output?.severity == "severe" ? (
                     <span className="mt-2 border rounded-full   text-white bg-error  badge ">
@@ -233,7 +233,13 @@ export default function Dashboard() {
                     </span>
                   )}
                 </div>
-
+                <label className="mt-2">Description:</label>
+                <div className="flex">
+                  <p className="font-normal text-md">
+                    {ai_output?.description}
+                  </p>
+                </div>
+                <div className="divider"></div>
                 <label className="mt-2">Specified Symptoms:</label>
                 <p>{text}</p>
                 <div className="divider"></div>
@@ -262,13 +268,6 @@ export default function Dashboard() {
                 <p>{ai_output?.linked_illnesses}</p>
                 <div className="divider"></div>
 
-                <label className="mt-2">Description:</label>
-                <div className="flex">
-                  <p className="font-normal text-md">
-                    {ai_output?.description}
-                  </p>
-                </div>
-                <div className="divider"></div>
                 <label className="mt-2">Suggestion:</label>
                 <p>{ai_output?.suggestion}</p>
                 <div className="divider"></div>

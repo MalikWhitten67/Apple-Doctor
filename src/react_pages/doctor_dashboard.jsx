@@ -194,7 +194,7 @@ export default function Dashboard() {
             <div className="  mt-8 flex flex-col gap-2">
               <div className="flex flex-col ">
                 <h2 className="card-title capitalize  flex">
-                  Linked illness or Disease: {ai_output?.illness_or_disease}
+                  Illness or Disease: {ai_output?.illness_or_disease}
                 </h2>
                 {ai_output?.severity == "severe" ? (
                   <span className="mt-2 border rounded-full   text-white bg-error  badge ">
