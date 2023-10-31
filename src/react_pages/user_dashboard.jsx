@@ -44,6 +44,7 @@ export default function Dashboard() {
       .then((response) => {
         if (!response.ok) {
           alert("please try again");
+          setLoading(false);
           return;
         }
         return response.json();
@@ -51,6 +52,7 @@ export default function Dashboard() {
       .then((data) => {
         if (data.error) {
           setError(true);
+          setLoading(false);
           return;
         }
         setAi_output(data);
@@ -68,6 +70,10 @@ export default function Dashboard() {
         setAnalysis(
           `symptoms: ${text}\ndate_accessed: ${currentDate}\nillness: ${data.illeness_or_disease}\nlinked_illnesses:${data?.linked_illnesses}\nseverity: ${data.severity}\nai_confidence:${data.confidence}`,
         );
+      })
+      .catch((e) => {
+        setLoading(false);
+        alert("Error Occured");
       });
   }
   return (
