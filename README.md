@@ -14,13 +14,38 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 
 ## Running/Installing
 
+1. Install all frontend dependencies used for development
+
 ```bash
 npm i
 ```
 
-```bash
-npm run dev
-```
+* Setting up backend
+   - go to [machine_learning_4kids](machinelearningforkids.co.uk) and click try it - then create a new project and fill 2 labels with data
+   - Next click make - python and then copy your api key -> your then going to place key inside of .env file
+     
+     ```env
+     api_key=key
+     ```
+  - Now you can run server.js which sets up all endpoints
+    
+* Database
+   - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command
+     
+     ```bash
+     pocketbase serve
+     ```
+   - goto [admin panel](127.0.0.1:8090/_/) - and finish installment
+   - Swap the api url in the index.jsx file to yours
+   - Now that you have an database swap to backend branch go into pocketbase folder and download the schema
+   - Go back to your panel - then settings and under import collections either click to upload the file or copy and paste
+   - Your done! that was easy now we need to just run the frontend
+     
+    ```bash
+     npm run dev
+    ```
+
+
 
 
 # Dev Log
