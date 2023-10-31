@@ -151,7 +151,7 @@ export default function Dashboard() {
         </div>
       </div>
       <dialog ref={outputRef} className="modal   ">
-        <div className=" bg-white p-2    h-screen  overflow-x-auto ">
+        <div className=" bg-white   xl:modal-box lg:modal-box   xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
           <div className="flex flex-row hero   justify-between">
             <svg
               xmlns="http://www.w3.org/2000/svg"
