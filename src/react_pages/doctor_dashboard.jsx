@@ -16,7 +16,7 @@ export default function Dashboard() {
     });
   }, []);
   return (
-    <div className="p-2  font-sans ">
+    <div className="p-2  font-sans   h-screen  xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] ">
       <Nav />
       <div className="mt-8 mb-16">
         <div className="card mt-2  border">
