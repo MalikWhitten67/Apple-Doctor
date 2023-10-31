@@ -299,7 +299,7 @@ export default function Message() {
             <span className="label-text text-lg font-bold">To</span>
           </label>
           <input
-            className="input rounded-full  w-full input-bordered"
+            className="input rounded-full input-sm w-full input-bordered"
             type="text"
             placeholder="Search by Email Address or Name"
             onChange={(e) => setSearch(e.target.value)}
@@ -463,7 +463,7 @@ export default function Message() {
             <div className="relative flex hero   mx-auto justify-center  ">
               <input
                 type="text"
-                className="input mt-2  w-full input-bordered rounded-full   "
+                className="input mt-2  w-full  input-sm input-bordered rounded-full   "
                 ref={message_input}
                 placeholder="Type a message"
               ></input>
@@ -478,7 +478,7 @@ export default function Message() {
                         message_input.current.value,
                       )
                 }
-                className="  absolute  bottom-2 mr-2 p-1 right-2  rounded text-blue-500 bg-white  mx-auto  top-4 justify-center"
+                className="  absolute  bottom-2 mr-2   right-2  rounded text-blue-500 bg-white  mx-auto   top-3 justify-center"
               >
                 Send
               </button>
