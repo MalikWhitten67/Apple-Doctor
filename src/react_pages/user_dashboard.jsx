@@ -271,7 +271,7 @@ export default function Dashboard() {
                 <label className="mt-2">Suggestion:</label>
                 <p>{ai_output?.suggestion}</p>
                 <div className="divider"></div>
-                <div className="card-actions mt-5  mb-12 xl:mb-0 lg:mb-0 flex  w-full">
+                <div className="card-actions mt-5   xl:mb-0 lg:mb-0 flex  w-full">
                   <div className="hero flex  justify-between">
                     <p className="btn btn-ghost capitalize p-0 pointer-events-none hover:bg-transparent focus:bg-transparent cursor-text bg-transparent justify-start font-semibold flex">
                       <span className="cursor-text">
