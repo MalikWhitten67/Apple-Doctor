@@ -81,3 +81,8 @@ npm i
      - Added chat deletion option - and send to doctor button works
      - Added bulk label updates allowing you to append data to multiple labels from the dataset all at once and auto train the model
 
+4. Oct 31st
+    - Did alot of ui fixes and enhancements
+    - Added more data to the database cleaned up the dataset to be more accurate for both doctors and regular users
+    - Implemented Attachments in messages allowing users to send their assements as an attachment inwhich shows as a card in the chat
+    - Bug fixes on the backend & frontend
