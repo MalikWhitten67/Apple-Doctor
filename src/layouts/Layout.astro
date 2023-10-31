@@ -16,10 +16,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<style>
-		 [data-placeholder]:empty::before {
-			 content: attr(data-placeholder);
-			 color: #999;
-		 }
+			[data-placeholder]:empty::before {
+				content: attr(data-placeholder);
+				color: #999;
+			}
 		</style>
 	</head>
 	<body>
