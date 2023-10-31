@@ -31,6 +31,7 @@ export default function Dashboard() {
   function analyze_symptoms(text) {
     if (text === "") {
       alert("please input text to analyze");
+      return;
     }
     setLoading(true);
     fetch("https://expressjs.malikwhitten.repl.co/classify", {
