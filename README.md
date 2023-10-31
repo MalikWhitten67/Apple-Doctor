@@ -14,13 +14,39 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 
 ## Running/Installing
 
+1. Install all frontend dependencies used for development
+
 ```bash
 npm i
 ```
 
-```bash
-npm run dev
-```
+* Setting up backend
+   - go to [machine_learning_4kids](machinelearningforkids.co.uk) and click try it - then create a new project and fill 2 labels with data then go back and select test and train your model
+   - Next click make - python and then copy your api key -> your then going to place key inside of .env file
+     
+     ```env
+     api_key=key
+     ```
+  - Now you can run server.js which sets up all endpoints
+  - You can check the status of the model on the [status page](127.0.0.1:3000/status)
+    
+* Database
+   - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command
+     
+     ```bash
+     pocketbase serve
+     ```
+   - goto [admin panel](127.0.0.1:8090/_/) - and finish installment
+   - Swap the api url in the index.jsx file to yours
+   - Now that you have an database swap to backend branch go into pocketbase folder and download the schema
+   - Go back to your panel - then settings and under import collections either click to upload the file or copy and paste
+   - Your done! that was easy now we need to just run the frontend
+     
+    ```bash
+     npm run dev
+    ```
+
+
 
 
 # Dev Log
@@ -42,6 +68,9 @@ npm run dev
      - Proper ui sizing for pc monitors
      - Adding common symptoms to datasets for users to view - to get a general understanding of the disease/illness
      - Adding suggestions - which can tell if a user can do it at home or if they should contact their doctor about the issue
+     - Cleaned the ui for pc users
+     - Made it so you cannot create duplicated chats
+     - Added chat deletion option - and send to doctor button works
 
 
 
