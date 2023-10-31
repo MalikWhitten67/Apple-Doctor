@@ -65,13 +65,9 @@ export default function Dashboard() {
         // This arrangement can be altered based on how we want the date's format to appear.
         let currentDate = `${day}-${month}-${year}`;
 
-        setAnalysis(`
-         symptoms: ${text}\n
-         date_accessed: ${currentDate}\n
-         linked_illness: ${data.illeness_or_disease}\n
-         severity: ${data.severity}\n
-         ai_confidence:${data.confidence}
-        `);
+        setAnalysis(
+          `symptoms: ${text}\ndate_accessed: ${currentDate}\nillness: ${data.illeness_or_disease}\nlinked_illnesses:${data?.linked_illnesses}\nseverity: ${data.severity}\nai_confidence:${data.confidence}`,
+        );
       });
   }
   return (
@@ -150,8 +146,8 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <dialog ref={outputRef} className="modal   ">
-        <div className=" bg-white   xl:modal-box lg:modal-box   xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
+      <dialog ref={outputRef} className="modal modal-open  ">
+        <div className=" bg-white   xl:modal-box lg:modal-box   p-5 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
           <div className="flex flex-row hero   justify-between">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -237,6 +233,26 @@ export default function Dashboard() {
 
                 <label className="mt-2">Common Symptoms:</label>
                 <p>{ai_output?.common_symptoms}</p>
+                <span className="  bg-sky-200 shadow  p-2  rounded hero flex gap-5 prose">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-7 h-7"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    />
+                  </svg>
+                  Linked illnesses are only given to show what can also cause it
+                </span>
+                <label className="mt-2">Linked Illnesses:</label>
+                <p>{ai_output?.linked_illnesses}</p>
+
                 <label className="mt-2">Description:</label>
                 <div className="flex">
                   <p className="font-normal text-md">
@@ -245,8 +261,8 @@ export default function Dashboard() {
                 </div>
                 <label className="mt-2">Suggestion:</label>
                 <p>{ai_output?.suggestion}</p>
-                <div className="card-actions mt-5  mb-12 xl:mb-0 lg:mb-0 flex w-full">
-                  <div className="hero flex">
+                <div className="card-actions mt-5  mb-12 xl:mb-0 lg:mb-0 flex  w-full">
+                  <div className="hero flex  justify-between">
                     <p className="btn btn-ghost capitalize p-0 pointer-events-none hover:bg-transparent focus:bg-transparent cursor-text bg-transparent justify-start font-semibold flex">
                       <span className="cursor-text">
                         {" "}
@@ -257,11 +273,11 @@ export default function Dashboard() {
                       {...(analysis
                         ? {
                             className:
-                              "btn btn-circle btn-ghost flex justify-center mx-auto z-[9999] absolute end-5 mt-18",
+                              "btn btn-circle btn-ghost flex justify-center mx-auto z-[9999]  mt-18",
                           }
                         : {
                             className:
-                              "btn btn-circle pointer-events-none btn-ghost opacity-50 flex justify-center mx-auto z-[9999] mt-18",
+                              "btn btn-circle pointer-events-none btn-ghost opacity-50 flex   z-[9999] mt-18",
                           })}
                       onClick={() => {
                         if (analysis) {
