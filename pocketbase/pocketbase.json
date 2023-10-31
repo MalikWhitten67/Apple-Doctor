@@ -332,7 +332,9 @@
                 }
             }
         ],
-        "indexes": [],
+        "indexes": [
+            "CREATE UNIQUE INDEX `idx_HGprXPs` ON `chats` (\n  `doctor`,\n  `user`\n)"
+        ],
         "listRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
         "viewRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
         "createRule": "@request.auth.id != null ",
@@ -460,6 +462,38 @@
                     "min": null,
                     "max": null,
                     "pattern": ""
+                }
+            },
+            {
+                "system": false,
+                "id": "a812ar3l",
+                "name": "doctor_saw",
+                "type": "relation",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {
+                    "collectionId": "t0bw8kyqy50fzxa",
+                    "cascadeDelete": false,
+                    "minSelect": null,
+                    "maxSelect": 1,
+                    "displayFields": null
+                }
+            },
+            {
+                "system": false,
+                "id": "xcdygj49",
+                "name": "user_saw",
+                "type": "relation",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {
+                    "collectionId": "_pb_users_auth_",
+                    "cascadeDelete": false,
+                    "minSelect": null,
+                    "maxSelect": 1,
+                    "displayFields": null
                 }
             }
         ],
