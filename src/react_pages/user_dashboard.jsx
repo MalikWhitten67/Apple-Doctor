@@ -68,7 +68,7 @@ export default function Dashboard() {
         let currentDate = `${day}-${month}-${year}`;
 
         setAnalysis(
-          `symptoms: ${text}\ndate_accessed: ${currentDate}\nillness: ${data.illeness_or_disease}\nlinked_illnesses:${data?.linked_illnesses}\nseverity: ${data.severity}\nai_confidence:${data.confidence}`,
+          `symptoms: ${text}\ndate_accessed: ${currentDate}\nillness: ${data?.illness_or_disease}\nlinked_illnesses:${data?.linked_illnesses}\nseverity: ${data.severity}\nai_confidence:${data.confidence}`,
         );
       })
       .catch((e) => {
@@ -153,7 +153,7 @@ export default function Dashboard() {
         </div>
       </div>
       <dialog ref={outputRef} className="modal    ">
-        <div className=" bg-white   xl:modal-box lg:modal-box   p-5 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
+        <div className=" bg-white flex-col gap-5   xl:modal-box lg:modal-box   p-5 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
           <div className="flex flex-row hero   justify-between">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -236,9 +236,11 @@ export default function Dashboard() {
 
                 <label className="mt-2">Specified Symptoms:</label>
                 <p>{text}</p>
+                <div className="divider"></div>
 
                 <label className="mt-2">Common Symptoms:</label>
                 <p>{ai_output?.common_symptoms}</p>
+                <div className="divider"></div>
                 <span className="  bg-sky-200 shadow  p-2  rounded hero flex gap-5 prose">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -258,6 +260,7 @@ export default function Dashboard() {
                 </span>
                 <label className="mt-2">Linked Illnesses:</label>
                 <p>{ai_output?.linked_illnesses}</p>
+                <div className="divider"></div>
 
                 <label className="mt-2">Description:</label>
                 <div className="flex">
@@ -265,8 +268,10 @@ export default function Dashboard() {
                     {ai_output?.description}
                   </p>
                 </div>
+                <div className="divider"></div>
                 <label className="mt-2">Suggestion:</label>
                 <p>{ai_output?.suggestion}</p>
+                <div className="divider"></div>
                 <div className="card-actions mt-5  mb-12 xl:mb-0 lg:mb-0 flex  w-full">
                   <div className="hero flex  justify-between">
                     <p className="btn btn-ghost capitalize p-0 pointer-events-none hover:bg-transparent focus:bg-transparent cursor-text bg-transparent justify-start font-semibold flex">
@@ -279,11 +284,11 @@ export default function Dashboard() {
                       {...(analysis
                         ? {
                             className:
-                              "btn btn-circle btn-ghost flex justify-center mx-auto z-[9999]  mt-18",
+                              "btn btn-circle btn-ghost flex justify-center mx-auto absolute end-0  z-[9999]  mt-18",
                           }
                         : {
                             className:
-                              "btn btn-circle pointer-events-none btn-ghost opacity-50 flex   z-[9999] mt-18",
+                              "btn btn-circle pointer-events-none btn-ghost opacity-50 flex absolute end-0   z-[9999] mt-18",
                           })}
                       onClick={() => {
                         if (analysis) {
