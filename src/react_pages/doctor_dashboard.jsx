@@ -123,11 +123,8 @@ export default function Dashboard() {
             <div className="flex flex-col"></div>
             {ai_output ? (
               <div>
-                <button className="btn   w-full bg-blue-500 hover:bg-blue-500 text-white mt-2">
-                  Send To Doctor
-                </button>
                 <button
-                  className="btn  w-full   bg-blue-500 hover:bg-blue-500 text-white mt-2"
+                  className="btn  w-full rounded-full  btn-sm bg-blue-500 hover:bg-blue-500 text-white mt-2"
                   onClick={() => {
                     outputRef.current.showModal();
                   }}
@@ -140,7 +137,7 @@ export default function Dashboard() {
                 onClick={() => analyze_symptoms(text)}
                 className="btn btn-sm rounded-full flex hero  bg-blue-500  text-white hover:bg-blue-500 mt-2"
               >
-                Analyze{" "}
+                Diagnose{" "}
                 {loading ? (
                   <div className="loading loading-spinnner loading-sm"></div>
                 ) : (
