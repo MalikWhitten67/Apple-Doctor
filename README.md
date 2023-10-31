@@ -36,7 +36,7 @@ npm i
   }
   ```
   - Now you can run server.js which sets up all endpoints
-  - You can check the status of the model on the [status page](127.0.0.1:3000/status)
+  - You can check the status of the model on the [status page](http://127.0.0.1:3000/status)
     
 * Database
    - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command
@@ -44,7 +44,7 @@ npm i
      ```bash
      pocketbase serve
      ```
-   - goto [admin panel](127.0.0.1:8090/_/) - and finish installment
+   - goto [admin panel](http://127.0.0.1:8090/_/) - and finish installment
    - Swap the api url in the index.jsx file to yours
    - Now that you have an database swap to backend branch go into pocketbase folder and download the schema
    - Go back to your panel - then settings and under import collections either click to upload the file or copy and paste
