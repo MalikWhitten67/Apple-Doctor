@@ -191,7 +191,7 @@ export default function Message() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5  p-5 mx-2 w-full mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
+      <div className="flex relative flex-col gap-5  p-5 mx-2 w-full mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
         {chats.length > 0 && !loading ? (
           chats.map((chat) => {
             return (
@@ -227,8 +227,8 @@ export default function Message() {
                     </div>
                   </div>
                   <button
-                    className="btn btn-ghost absolute end-0  "
-                    onClick={(e) => del("chats", chat.id)}
+                    className="  absolute end-3  "
+                    onClick={del("chats", chat.id)}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
