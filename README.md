@@ -35,6 +35,14 @@ npm run dev
      - realtime reflective messages work aswell
      - grabbing useful data for accessments - analyzing data from reputable sources and making useful prompts to better get a quality answer.
      - Optimized ai backend api to better give an answer based on median confidency rating
+3. Oct 30th:
+     - Finished working on analysis output / analyzing for user dashboard
+     - Reorganized / fixed dataset inconsistencies by using concise inputs
+     - small bug fixes on backend
+     - Proper ui sizing for pc monitors
+     - Adding common symptoms to datasets for users to view - to get a general understanding of the disease/illness
+     - Adding suggestions - which can tell if a user can do it at home or if they should contact their doctor about the issue
+
 
 
 
