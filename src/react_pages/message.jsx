@@ -6,11 +6,11 @@ export default function Message() {
   let [messages, setMessages] = useState([]);
   let [isDoctor, setIsDoctor] = useState(api.authStore.model.isDoctor);
   let compose = useRef();
-  let [search, setSearch] = useState("");
+  let [search, setSearch] = useState(null);
   let chat = useRef();
   let message_input = useRef();
   let [isIndex, setIsIndex] = useState(false);
-  let [searched, setSearched] = useState(false);
+  let [searched, setSearched] = useState(null);
   let [loading, setLoading] = useState(false);
   let [chats, setChats] = useState([]);
   let [currentChat, setCurrentChat] = useState(null);
@@ -28,9 +28,9 @@ export default function Message() {
     }
     if (!isIndex) {
       api
-        .collection("users")
+        .collection(api.authStore.model?.isDoctor ? "users" : "doctors")
         .getFirstListItem(
-          search.includes("@") ? `email="${search}"` : `name~"${search}"`,
+          search?.includes("@") ? `email="${search}"` : `name~"${search}"`,
         )
         .then((res) => {
           setSearched(res);
@@ -59,28 +59,33 @@ export default function Message() {
   }, []);
 
   function createChat() {
+    let form = new FormData();
+    let d_id = isDoctor ? api.authStore.model.id : searched.id;
+    let user_id = isDoctor ? searched.id : api.authStore.model.id;
+    form.append("doctor", d_id);
+    form.append("user", user_id);
     api
       .collection("chats")
-      .getFirstListItem(
-        `doctor="${isDoctor ? api.authStore.model.id : searched.id}" && user="${
-          isDoctor ? searched.id : api.authStore.model.id
-        }"`,
-      )
-      .then((res) => {
-        if (res) {
-          compose.current.close();
-          return;
-        }
-      });
-    api
-      .collection("chats")
-      .create({
-        doctor: isDoctor ? api.authStore.model.id : searched.id,
-        user: isDoctor ? searched.id : api.authStore.model.id,
+      .create(form, {
+        expand: "user,doctor",
       })
       .then((res) => {
         compose.current.close();
         setChats([...chats, res]);
+      })
+      .catch((e) => {
+        let error = e.data.data;
+        if (
+          error.doctor.code == "validation_not_unique" &&
+          error.user.code == "validation_not_unique"
+        ) {
+          alert("already a chat created with given user");
+          compose.current.close();
+          let chat = chats.filter((c) => {
+            return c.doctor == d_id && c.user == user_id;
+          });
+          getChat(chat[0].id);
+        }
       });
   }
 
@@ -118,28 +123,49 @@ export default function Message() {
   }
 
   function sendMessage(userid, content) {
-    let data = {
+    let l_data = {
       doctor: isDoctor ? api.authStore.model.id : userid,
       user: isDoctor ? userid : api.authStore.model.id,
       message: content,
       sent_by: api.authStore.model.id,
       chat: currentChat.id,
     };
+    const data = {
+      user: l_data.user,
+      doctor: l_data.doctor,
+      messages: currentChat.messages,
+    };
+
     api
       .collection(`messages`)
-      .create(data)
-      .then((res) => {
+      .create(l_data)
+      .then(async (res) => {
         message_input.current.value = "";
         compose.current.close();
+        data.messages.push(res);
+        await api.collection("chats").update(currentChat.id, l_data);
         setMessages((messages) => [...messages, res]);
       });
   }
   window.onbeforeunload = function () {
     api.collection("messages").unsubscribe("*");
   };
+
+  function del(collection, id) {
+    api
+      .collection(collection)
+      .delete(id)
+      .then(() => {
+        if (collection == "messages") {
+          setMessages(messages.filter((x) => x.id != x.id));
+        } else if (collection == "chats") {
+          setChats(chats.filter((x) => x.id != x.id));
+        }
+      });
+  }
   return (
-    <div className="p-2">
-      <div className="navbar bg-base-100 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
+    <div className=" w-full h-full">
+      <div className="navbar bg-base-100 w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-xl pointer-events-none">
             Chat
@@ -165,16 +191,15 @@ export default function Message() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5 p-2  mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
+      <div className="flex flex-col gap-5  p-5 mx-2 w-full mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
         {chats.length > 0 && !loading ? (
           chats.map((chat) => {
             return (
               <div
                 key={chat.id}
-                onClick={() => getChat(chat.id)}
-                className="flex flex-col cursor-pointer p-2"
+                className="flex flex-col cursor-pointer w-full  "
               >
-                <div className="flex hero">
+                <div className="flex hero  ">
                   <div className="avatar online placeholder">
                     <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
                       <span className="text-xl">
@@ -184,18 +209,42 @@ export default function Message() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex flex-col mx-2">
-                    <p className="">
-                      {isDoctor
-                        ? chat.expand?.user.name
-                        : chat.expand?.doctor.name}
-                    </p>
-                    <p className="text-sm opacity-50">
-                      {isDoctor
-                        ? chat.expand?.user.email
-                        : chat.expand?.doctor.email}
-                    </p>
+                  <div className="flex justify-between w-full">
+                    <div className="flex flex-col mx-2">
+                      <p
+                        className="hover:link"
+                        onClick={() => getChat(chat.id)}
+                      >
+                        {isDoctor
+                          ? chat.expand?.user.name
+                          : chat.expand?.doctor.name}
+                      </p>
+                      <p className="text-sm opacity-50">
+                        {isDoctor
+                          ? chat.expand?.user.email
+                          : chat.expand?.doctor.email}
+                      </p>
+                    </div>
                   </div>
+                  <button
+                    className="btn btn-ghost absolute end-0  "
+                    onClick={(e) => del("chats", chat.id)}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
             );
@@ -219,8 +268,11 @@ export default function Message() {
         )}
       </div>
 
-      <dialog ref={compose} className="modal ">
-        <div className=" relative bg-white p-4 w-full  xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen rounded">
+      <dialog
+        ref={compose}
+        className="modal  w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto "
+      >
+        <div className="   relative bg-white h-full p-5 w-full  xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto ">
           <div className="flex flex-row hero justify-between">
             <svg
               onClick={() => compose.current.close()}
@@ -282,7 +334,7 @@ export default function Message() {
           ) : null}
 
           <button
-            {...(searched.checked
+            {...(searched?.checked
               ? {
                   className:
                     "btn absolute inset-x-0 hover:bg-blue-500 bottom-5 w-5/6 left-0 rounded-full mx-auto justify-center flex  bg-blue-500 text-white ",
