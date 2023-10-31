@@ -12,20 +12,6 @@ Apple doctor is an ai revolved app made to simplify self analysis - and workflow
 4. Express x machine learning 4 kids api - for ai to frontend communication and model training
 5. Data For diseases and illnesses: https://my.clevelandclinic.org
 
-## Dev Log
-
-1. Oct 28th: 
-   - Implemented Login / Register both as a patient and a doctor
-   - Started working on the dashboard
-   - Reworked Readme
-2. Oct 29th: Design layout refractoring - made  the ai navigatable / consistent and easy to use
-   - Doctors ui is seperate from user ui
-   - Messages page done - you can create chats by searching your doctor or vice versa
-     - realtime reflective messages work aswell
-   - Structuring of dataset for training
-       - Grabbed 5 diseases or illnesses from a-z - writing severity level and using concice prompts
-   - Dataset / returned optimization
-       - Optimized ai backend api to better give an answer based on median confidency rating
  
  
 ## Dataset layout
