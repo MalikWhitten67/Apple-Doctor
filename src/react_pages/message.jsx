@@ -228,7 +228,7 @@ export default function Message() {
                   </div>
                   <button
                     className="  absolute end-3  "
-                    onClick={del("chats", chat.id)}
+                    onClick={(e) => del("chats", chat.id)}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
