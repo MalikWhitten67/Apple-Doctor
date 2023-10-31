@@ -27,6 +27,14 @@ npm i
      ```env
      api_key=key
      ```
+  - Download the dataset from branch backend and then create a config.json file in the main dir where server.js is located
+  ```json
+  {
+    "min_confidence":"20",
+   "rated_confidence":"60",
+   "dataset":"./data.json"
+  }
+  ```
   - Now you can run server.js which sets up all endpoints
   - You can check the status of the model on the [status page](127.0.0.1:3000/status)
     
