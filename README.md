@@ -68,6 +68,9 @@ npm i
      - Proper ui sizing for pc monitors
      - Adding common symptoms to datasets for users to view - to get a general understanding of the disease/illness
      - Adding suggestions - which can tell if a user can do it at home or if they should contact their doctor about the issue
+     - Cleaned the ui for pc users
+     - Made it so you cannot create duplicated chats
+     - Added chat deletion option - and send to doctor button works
 
 
 
