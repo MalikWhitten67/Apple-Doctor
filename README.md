@@ -21,13 +21,14 @@ npm i
 ```
 
 * Setting up backend
-   - go to [machine_learning_4kids](machinelearningforkids.co.uk) and click try it - then create a new project and fill 2 labels with data
+   - go to [machine_learning_4kids](machinelearningforkids.co.uk) and click try it - then create a new project and fill 2 labels with data then go back and select test and train your model
    - Next click make - python and then copy your api key -> your then going to place key inside of .env file
      
      ```env
      api_key=key
      ```
   - Now you can run server.js which sets up all endpoints
+  - You can check the status of the model on the [status page](127.0.0.1:3000/status)
     
 * Database
    - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command
