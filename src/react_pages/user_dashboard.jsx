@@ -100,7 +100,7 @@ export default function Dashboard() {
         let currentDate = `${day}-${month}-${year}`;
 
         setAnalysis(
-          `symptoms: ${text}\ndate_accessed: ${currentDate}\nillness: ${data?.illness_or_disease}\nlinked_illnesses:${data?.linked_illnesses}\nseverity: ${data.severity}\nai_confidence:${data.confidence}`,
+          `symptoms: ${text}\n\ndate_accessed: ${currentDate}\n\nillness: ${data?.illness_or_disease}\n\nlinked_illnesses:${data?.linked_illnesses}\n\nseverity: ${data.severity}\n\nai_confidence:${data.confidence}`,
         );
       })
       .catch((e) => {
@@ -211,9 +211,6 @@ export default function Dashboard() {
             <div className="flex flex-col"></div>
             {ai_output ? (
               <div>
-                <button className="btn   w-full bg-blue-500 hover:bg-blue-500 text-white mt-2">
-                  Send To Doctor
-                </button>
                 <button
                   className="btn  w-full   bg-blue-500 hover:bg-blue-500 text-white mt-2"
                   onClick={() => {

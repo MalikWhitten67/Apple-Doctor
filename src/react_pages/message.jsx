@@ -207,12 +207,9 @@ export default function Message() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex justify-between w-full">
+                  <div className="flex justify-between font-semibold w-full">
                     <div className="flex flex-col mx-2">
-                      <p
-                        className="hover:link"
-                        onClick={() => getChat(chat.id)}
-                      >
+                      <p onClick={() => getChat(chat.id)}>
                         {isDoctor
                           ? chat.expand?.user.name
                           : chat.expand?.doctor.name}
@@ -370,7 +367,7 @@ export default function Message() {
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
-            <p className="mx-2 mt-">
+            <p className="mx-2  ">
               {currentChat
                 ? `${
                     isDoctor
@@ -381,7 +378,6 @@ export default function Message() {
             </p>
             <div></div>
           </div>
-
           <div className="flex flex-col  gap-2 mb-12 mt-12  p-2">
             {currentChat && messages.length > 0 ? (
               messages.map((message) => {
@@ -476,30 +472,41 @@ export default function Message() {
               </div>
             )}
           </div>
+          <div className="absolute bottom-5 left-0 w-full ">
+            <div className="  w-full p-3 bg-white justify-center flex xl:w-full left-0 xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto    ">
+              <div className="relative flex jusitify-between  w-full   gap-5 hero    mx-auto  ">
+                <input
+                  type="text"
+                  className="input    w-full input-sm flex input-bordered rounded-full   "
+                  ref={message_input}
+                  placeholder="Type a message"
+                ></input>
 
-          <div className=" absolute bottom-0 w-full p-3 bg-white justify-center flex xl:w-full left-0 xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto    mt-32">
-            <div className="relative flex hero   mx-auto justify-center  ">
-              <input
-                type="text"
-                className="input mt-2  w-full  input-sm input-bordered rounded-full   "
-                ref={message_input}
-                placeholder="Type a message"
-              ></input>
-              <button
-                onClick={() =>
-                  !message_input.current.value
-                    ? alert("message cannot be empty")
-                    : sendMessage(
-                        isDoctor
-                          ? currentChat.expand?.user.id
-                          : currentChat.expand?.doctor.id,
-                        message_input.current.value,
-                      )
-                }
-                className="  absolute  bottom-2 mr-2   right-2  rounded text-blue-500 bg-white  mx-auto   top-3 justify-center"
-              >
-                Send
-              </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-7 h-7 hover:text-blue-500 cursor-pointer"
+                  onClick={() => {
+                    !message_input.current.value
+                      ? alert("message cannot be empty")
+                      : sendMessage(
+                          isDoctor
+                            ? currentChat.expand?.user.id
+                            : currentChat.expand?.doctor.id,
+                          message_input.current.value,
+                        );
+                  }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
