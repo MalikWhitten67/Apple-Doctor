@@ -142,8 +142,6 @@ export default function Message() {
       .then(async (res) => {
         message_input.current.value = "";
         compose.current.close();
-        data.messages.push(res);
-        await api.collection("chats").update(currentChat.id, l_data);
         setMessages((messages) => [...messages, res]);
       });
   }
@@ -390,7 +388,7 @@ export default function Message() {
                 return (
                   <div key={message.id}>
                     {message.sent_by === api.authStore.model.id ? (
-                      <div className="chat chat-end mb-6">
+                      <div className="chat relative chat-end mb-6">
                         <div className="chat-image avatar">
                           <div className="avatar  placeholder">
                             <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
@@ -414,7 +412,17 @@ export default function Message() {
                                 .split(":")[1]}
                           </time>
                         </div>
-                        <div className="chat-bubble">{message.message}</div>
+
+                        {message?.isAttatchment ? (
+                          <div class="card w-5/6   bg-base-100 shadow rounded border-base-200 border-1">
+                            <div className="p-3">
+                              <p>Attatchement</p>
+                              <p>{message.message}</p>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="chat-bubble">{message.message}</div>
+                        )}
                       </div>
                     ) : (
                       <div key={message.id} className="chat mb-6 chat-start">
@@ -443,7 +451,17 @@ export default function Message() {
                                 .split(":")[1]}
                           </time>
                         </div>
-                        <div className="chat-bubble">{message.message}</div>
+                        {message?.isAttatchment ? (
+                          <div class="card w-5/6   bg-base-100 shadow rounded border-base-200 border-1">
+                            <div className="p-3">
+                              <p>Attatchement</p>
+                              <div className="divider mt-0 p-0"></div>
+                              <p>{message.message}</p>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="chat-bubble">{message.message}</div>
+                        )}
                       </div>
                     )}
                   </div>

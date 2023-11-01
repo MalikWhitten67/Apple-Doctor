@@ -8,6 +8,7 @@ export default function Login() {
   let [isLogin, setIsLogin] = useState(false);
   let [isDoctor, setIsDoctor] = useState(false);
   let [loginData, setLoginData] = useState({ email: "", password: "" });
+  let [error, setError] = useState(null);
   function login(e) {
     setBtnstate("loading");
     const authData = api
@@ -18,6 +19,9 @@ export default function Login() {
         ? (window.location.href = "/dash_doctor")
         : (window.location.href = "/dash_user");
     });
+    authData.catch((e) => {
+      console.log(e.data.data);
+    });
     setTimeout(() => {
       setBtnstate("aborted");
     }, 1000);
@@ -27,6 +31,7 @@ export default function Login() {
   }, []);
   return (
     <div>
+      {error ? <div className="alert aler-error">{error}</div> : ""}
       <div className="hero  w-screen  xl:w-[30vw] mt-24 justify-center flex flex-col gap-5 mx-auto">
         <div className=" mb-8 ">
           <h1

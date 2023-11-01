@@ -11,8 +11,13 @@ export default function Dashboard() {
   let [ai_output, setAi_output] = useState(null);
   let [analysis, setAnalysis] = useState(null);
   let [error, setError] = useState(false);
+  let compose = useRef();
   let textinput = useRef();
   let outputRef = useRef();
+  let [searched, setSearched] = useState(null);
+  let isDoctor = api.authStore.model?.isDoctor;
+  let [search, setSearch] = useState(null);
+  let [chat, setChat] = useState(null);
   useEffect(() => {
     if (api.authStore.model.isDoctor) window.location.href = "/dash_doctor";
     api.collection("users").authRefresh();
@@ -21,6 +26,33 @@ export default function Dashboard() {
       console.log("Server is up");
     });
   }, []);
+  let isIndex = false;
+  useEffect(() => {
+    function debounce(func, timeout = 300) {
+      let timer;
+      isIndex = true;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.apply(this, args);
+          setIsIndex(false);
+        }, timeout);
+      };
+    }
+    if (!isIndex) {
+      api
+        .collection(api.authStore.model?.isDoctor ? "users" : "doctors")
+        .getFirstListItem(
+          search?.includes("@") ? `email="${search}"` : `name~"${search}"`,
+        )
+        .then((res) => {
+          setSearched(res);
+        })
+        .catch((err) => {
+          setSearched(false);
+        });
+    }
+  }, [search]);
   function download(content, fileName, contentType) {
     var a = document.createElement("a");
     var file = new Blob([content], { type: contentType });
@@ -75,6 +107,61 @@ export default function Dashboard() {
         setLoading(false);
         alert("Error Occured");
       });
+  }
+  function createChat() {
+    let form = new FormData();
+    let d_id = searched.id;
+    let user_id = api.authStore.model.id;
+    form.append("doctor", d_id);
+    form.append("user", user_id);
+    api
+      .collection("chats")
+      .create(form, {
+        expand: "user,doctor",
+      })
+      .then((res) => {
+        setChat(res);
+        getChat();
+      });
+  }
+  async function getChat(called) {
+    if (chat) return;
+    if (called) {
+      return new Promise((res1, rej) => {
+        api
+          .collection("chats")
+          .getFirstListItem(`doctor="${searched.id}"`)
+          .then((res) => {
+            res1(res);
+            setChat(res);
+          })
+          .catch((err) => {
+            console.log(err);
+            res1(false);
+            createChat();
+          });
+      });
+    }
+  }
+  async function sendMessage(userid, content) {
+    await getChat(true).then((i) => {
+      if (!i) return;
+      let l_data = {
+        doctor: searched.id,
+        user: api.authStore.model.id,
+        message: content,
+        sent_by: api.authStore.model.id,
+        chat: i.id,
+        isAttatchment: true,
+      };
+
+      api
+        .collection(`messages`)
+        .create(l_data)
+        .then(async (res) => {
+          compose.current.close();
+        });
+    });
   }
   return (
     <div className=" p-2 font-sans xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto ">
@@ -152,6 +239,88 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+      <dialog
+        ref={compose}
+        className="modal  w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto "
+      >
+        <div className="   relative bg-white h-full p-5 w-full  xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto ">
+          <div className="flex flex-row hero justify-between">
+            <svg
+              onClick={() => compose.current.close()}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 cursor-pointer"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+            <p className="mx-2 mt-">
+              Choose a {isDoctor ? "patient" : "doctor"} to chat with.
+            </p>
+            <div></div>
+          </div>
+
+          <label className="label mt-6">
+            <span className="label-text text-lg font-bold">To</span>
+          </label>
+          <input
+            className="input rounded-full input-sm w-full input-bordered"
+            type="text"
+            placeholder="Search by Email Address or Name"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+
+          {searched ? (
+            <div className="flex  hero justify-between gap-2 mt-6">
+              <div className="flex flex-row hero gap-3">
+                <div className="avatar   placeholder">
+                  <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+                    <span className="text-xl">{searched.name[0]}</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col">
+                  <p className="font-bold">{searched.name}</p>
+                  <p className="text-sm">{searched.email}</p>
+                </div>
+              </div>
+              <div class="form-control  ">
+                <label class="cursor-pointer label  ">
+                  <input
+                    type="checkbox"
+                    class="checkbox "
+                    onChange={(e) => {
+                      setSearched({ ...searched, checked: e.target.checked });
+                    }}
+                  />
+                </label>
+              </div>
+            </div>
+          ) : null}
+
+          <button
+            onClick={() => {
+              sendMessage(searched.id, analysis);
+            }}
+            {...(searched?.checked
+              ? {
+                  className:
+                    "btn absolute inset-x-0 hover:bg-blue-500 bottom-5 w-5/6 left-0 rounded-full mx-auto justify-center flex  bg-blue-500 text-white ",
+                }
+              : {
+                  className: "hidden",
+                })}
+          >
+            {searched ? `Send Assessment to ${searched.name}` : ``}
+          </button>
+        </div>
+      </dialog>
       <dialog ref={outputRef} className="modal    ">
         <div className=" bg-white flex-col gap-5   xl:modal-box lg:modal-box   p-5 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen  overflow-x-auto ">
           <div className="flex flex-row hero   justify-between">
@@ -311,7 +480,12 @@ export default function Dashboard() {
                       </svg>
                     </span>
                   </div>
-                  <button className="btn bg-blue-500 text-white w-full  ">
+                  <button
+                    className="btn bg-blue-500 text-white w-full  "
+                    onClick={() => {
+                      compose.current.showModal();
+                    }}
+                  >
                     Send To your Doctor
                   </button>
                 </div>
