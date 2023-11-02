@@ -7,5 +7,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), tailwind()],
   output:'server',
-  adapter:netlify()
+  adapter:netlify({
+     dist: new URL('./dist/', import.meta.url),
+  })
 });
