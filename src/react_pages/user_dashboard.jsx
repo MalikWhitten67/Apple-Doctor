@@ -21,7 +21,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (api.authStore.model.isDoctor) window.location.href = "/dash_doctor";
     api.collection("users").authRefresh();
-    fetch("https://expressjs.malikwhitten.repl.co/").then((res) => {
+    fetch("https://apple-doctor-backend.malikwhitten.repl.co/").then((res) => {
       if (!res.ok) alert("Server is down");
       console.log("Server is up");
     });
@@ -41,7 +41,7 @@ export default function Dashboard() {
     }
     if (!isIndex) {
       api
-        .collection(api.authStore.model?.isDoctor ? "users" : "doctors")
+        .collection("users")
         .getFirstListItem(
           search?.includes("@") ? `email="${search}"` : `name~"${search}"`,
         )
@@ -66,7 +66,7 @@ export default function Dashboard() {
       return;
     }
     setLoading(true);
-    fetch("https://expressjs.malikwhitten.repl.co/classify", {
+    fetch("https://apple-doctor-backend.malikwhitten.repl.co/classify", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
