@@ -23,7 +23,7 @@ const key = process.env['api_key']
 
 app.post('/train', async (req, res) => {
   let data = req.body;
-  res.json(await train(data.data,data.label))
+  res.json(await train(data.data, data.label))
 })
 
 app.get('/status', async (req, res) => {
@@ -31,7 +31,7 @@ app.get('/status', async (req, res) => {
 })
 
 app.post('/classify', (req, res) => {
-  const data = req.body;
+  const data = req.body.data
   const url = "https://machinelearningforkids.co.uk/api/scratch/" + key + "/classify";
   fetch(url, {
     method: 'POST',
@@ -42,6 +42,7 @@ app.post('/classify', (req, res) => {
   })
     .then(response => response.json())
     .then(data => {
+      console.log(data)
       let bestResult = null;
 
       data.forEach(element => {
@@ -55,6 +56,7 @@ app.post('/classify', (req, res) => {
             severity: trainingData.severity,
             confidence: confidence,
             description: trainingData.description,
+            linked_illnesses: trainingData?.linked_illnesses,
             image: trainingData.image,
             suggestion: trainingData.suggestion,
             common_symptoms: trainingData.common_symptoms
@@ -85,9 +87,9 @@ app.get('/dash', (req, res) => {
   res.sendFile(path.join(__dirname + '/admin_dash/dash.html'))
 })
 
-app.get('/bulktrain', async (req, res) => {
+app.post('/bulktrain', async (req, res) => {
 
-  res.json(await persistBulkData())
+  res.json(await persistBulkData(req.body))
 
 })
 app.listen(port, () => console.log(`Apple Doc Listening for requests on: ${port}!`));
@@ -107,11 +109,11 @@ function train(data, label) {
         console.log('Success:', data);
         resolve(data);
       })
-      .catch((e)=>{
+      .catch((e) => {
         reject(e)
       })
   })
-  
+
 }
 function getStatus() {
   return new Promise((resolve, reject) => {
@@ -145,7 +147,7 @@ function getStatus() {
             indicator: 'An error occured'
           },
         };
-        resolve({ status: status[data.status].code, indicator:status[data.status].indicator });
+        resolve({ status: status[data.status].code, indicator: status[data.status].indicator });
       })
       .catch(error => {
         console.log(error);
@@ -163,11 +165,13 @@ function trainModel() {
     },
     body: JSON.stringify({}),
   }).then(response => response.json())
+    .then((d) => {
+      console.log('Successfully trained the model')
+    })
 
 }
 
-async function persistBulkData() {
-  let isOk = false;
+async function persistBulkData(skip) {
   try {
     const status = await getStatus()
 
@@ -183,16 +187,20 @@ async function persistBulkData() {
     for (let i in json.training_data) {
       let symptoms = json.training_data[i].symptoms;
       let label = json.training_data[i].label;
+      if (skip.includes(label)) {
+        console.log('Skipping ', label)
+        continue
+      }
+      if (last_trained.includes(label)) {
+        console.log('already trained: ', label);
+        continue
+      } else {
+        for (let j = 0; j < symptoms.length; j++) {
+          const symptom = symptoms[j];
 
-      // Initialize a unique label for the parent
-      let parentLabel = label;
-
-      // Loop through symptoms and create unique labels
-      for (let j = 0; j < symptoms.length; j++) {
-        const symptom = symptoms[j];
-
-        // Train the symptom with its unique label
-        isOk = await train(symptom, label);
+          // Train the symptom with its unique label
+          isOk = await train(symptom, label);
+        }
       }
     }
     await trainModel();
