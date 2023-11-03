@@ -401,16 +401,25 @@ export default function Message() {
                   <div key={message.id}>
                     {message.sent_by === api.authStore.model.id ? (
                       <div className="chat relative chat-end mb-6">
-                        <div className="chat-image avatar">
-                          <div className="avatar  placeholder">
-                            <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
-                              <span className="text-xl">
-                                {isDoctor
-                                  ? currentChat.expand?.user.name[0]
-                                  : currentChat.expand?.doctor.name[0]}
-                              </span>
+                        <div className="chat-image avatar w-10  rounded-full border border-1 border-base-300 ">
+                          {api.authStore.model.avatar || edited.avatar ? (
+                            <img
+                              src={
+                                !api.authStore.model.isDoctor
+                                  ? `${api.baseUrl}/api/files/_pb_users_auth_/${api.authStore.model.id}/${api.authStore.model.avatar}`
+                                  : `${api.baseUrl}/api/files/t0bw8kyqy50fzxa/${api.authStore.model.id}/${api.authStore.model.avatar}`
+                              }
+                              className=" rounded-full"
+                            />
+                          ) : (
+                            <div className="avatar placeholder">
+                              <div className="bg-neutral-focus text-neutral-content  border-slate-200 rounded-full w-10">
+                                <span className="text-xl capitalize">
+                                  {api.authStore.model.name[0]}
+                                </span>
+                              </div>
                             </div>
-                          </div>
+                          )}
                         </div>
                         <div className="chat-header">
                           You!
@@ -438,17 +447,29 @@ export default function Message() {
                       </div>
                     ) : (
                       <div key={message.id} className="chat mb-6 chat-start">
-                        <div className="chat-image avatar">
-                          <div className="avatar  placeholder">
-                            <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
-                              <span className="text-xl">
-                                {isDoctor
-                                  ? currentChat.expand?.doctor.name[0]
-                                  : currentChat.expand?.user.name[0]}
-                              </span>
+                        <div className="chat-image avatar w-10  rounded-full border border-1 border-base-300 ">
+                          {currentChat.expand?.avatar ? (
+                            <img
+                              src={
+                                !isDoctor
+                                  ? `${api.baseUrl}/api/files/_pb_users_auth_/${currentChat.expand?.user.id}/${currentChat.expand?.user.avatar}`
+                                  : `${api.baseUrl}/api/files/t0bw8kyqy50fzxa/${currentChat.expand?.doctor.id}/${currentChat.expand?.doctor.avatar}`
+                              }
+                              className=" rounded-full"
+                            />
+                          ) : (
+                            <div className="avatar placeholder">
+                              <div className="bg-neutral-focus text-neutral-content  border-slate-200 rounded-full w-10">
+                                <span className="text-xl capitalize">
+                                  {isDoctor
+                                    ? currentChat.expand?.doctor.name[0]
+                                    : currentChat.expand?.user.name[0]}
+                                </span>
+                              </div>
                             </div>
-                          </div>
+                          )}
                         </div>
+
                         <div className="chat-header">
                           {isDoctor
                             ? currentChat.expand?.doctor.name

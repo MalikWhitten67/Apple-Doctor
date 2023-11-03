@@ -8,9 +8,20 @@ export default function Index() {
   let [hasChanged, setHasChanged] = useState(false);
   let [edited, setEdited] = useState({});
   function saveChanges() {
+    let form = new FormData();
+    if (edited.name) {
+      form.append("name", edited.name);
+    } else if (edited.email) {
+      form.append("name", edited.email);
+    } else if (edited.avatar) {
+      form.append("name", edited.avatar);
+      setHasChanged(false);
+    } else {
+      return;
+    }
     api
       .collection(profile.isDoctor ? "doctors" : "users")
-      .update(profile.id, edited)
+      .update(profile.id, form)
       .then((d) => {
         api.collection(profile.isDoctor ? "doctors" : "users").authRefresh();
         setEdit(null);
@@ -59,9 +70,9 @@ export default function Index() {
                       src={
                         edited.avatar
                           ? URL.createObjectURL(edited.avatar)
-                          : profile.avatar
+                          : profile.avatar && profile.isDoctor != true
                           ? `${api.baseUrl}/api/files/_pb_users_auth_/${profile.id}/${profile.avatar}`
-                          : ""
+                          : `${api.baseUrl}/api/files/t0bw8kyqy50fzxa/${profile.id}/${profile.avatar}`
                       }
                       className="w-16 h-16 rounded-full border border-1 border-base-300 avatar"
                     />
