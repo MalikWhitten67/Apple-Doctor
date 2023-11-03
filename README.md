@@ -48,6 +48,7 @@ npm i
    - Swap the api url in the index.jsx file to yours
    - Now that you have an database swap to backend branch go into pocketbase folder and download the schema
    - Go back to your panel - then settings and under import collections either click to upload the file or copy and paste
+   - Now in index.jsx replace the current baseUrl with yours
    - Your done! that was easy now we need to just run the frontend
      
     ```bash
@@ -86,3 +87,10 @@ npm i
     - Added more data to the database cleaned up the dataset to be more accurate for both doctors and regular users
     - Implemented Attachments in messages allowing users to send their assements as an attachment inwhich shows as a card in the chat
     - Bug fixes on the backend & frontend
+      
+5.  Nov 1st - 3rd
+    - Implemented doctor and user profile editing avatars and more
+    - Finished settings page
+    - Added message deleting by hovering
+    - Fixes to message ui
+    - Published the website to be presented
