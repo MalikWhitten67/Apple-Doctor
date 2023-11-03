@@ -3,16 +3,16 @@ import Nav from "../components/react/nav";
 import { api } from "./index";
 
 export default function Index() {
-  let [user, setUser] = useState(api.authStore.model);
+  let [profile, setProfile] = useState(api.authStore.model);
   let [edit, setEdit] = useState(null);
   let [hasChanged, setHasChanged] = useState(false);
-  let [edited, setEdited] = useState(api.authStore.model);
+  let [edited, setEdited] = useState({});
   function saveChanges() {
     api
-      .collection(edited.isDoctor ? "doctors" : "users")
-      .update(edited.id, edited)
+      .collection(profile.isDoctor ? "doctors" : "users")
+      .update(profile.id, edited)
       .then((d) => {
-        api.collection(edited.isDoctor ? "doctors" : "users").authRefresh();
+        api.collection(profile.isDoctor ? "doctors" : "users").authRefresh();
         setEdit(null);
         setHasChanged(false);
       });
@@ -104,7 +104,7 @@ export default function Index() {
                 onChange={(e) => {
                   if (e.target.value != edited.name) {
                     setHasChanged(true);
-                  } else {
+                  } else if (e.target.value == "") {
                     setHasChanged(false);
                   }
                   setEdited({ ...edited, name: e.target.value });
@@ -133,10 +133,10 @@ export default function Index() {
                 className="mt-2 input input-bordered w-full "
                 placeholder={api.authStore.model.email}
                 onChange={(e) => {
-                  if (e.target.value != edited.email) {
+                  if (e.target.value != edited.name) {
                     setHasChanged(true);
-                  } else {
-                    setHasChanged(true);
+                  } else if (e.target.value == "") {
+                    setHasChanged(false);
                   }
                   setEdited({ ...edited, email: e.target.value });
                 }}
