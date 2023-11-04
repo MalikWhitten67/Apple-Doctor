@@ -476,7 +476,7 @@ export default function Message() {
               </div>
             )}
           </div>
-          <div className="absolute bottom-5 left-0 w-full ">
+          <div className="absolute bottom-0 left-0 w-full ">
             <div className="  w-full p-3 bg-white justify-center flex xl:w-full left-0 xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto    ">
               <div className="relative flex jusitify-between  w-full   gap-5 hero    mx-auto  ">
                 <input
