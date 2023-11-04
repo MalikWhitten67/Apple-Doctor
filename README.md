@@ -21,12 +21,20 @@ npm i
 ```
 
 * Setting up backend
-   - go to [machine_learning_4kids](machinelearningforkids.co.uk) and click try it - then create a new project and fill 2 labels with data then go back and select test and train your model
+   - go to [machine_learning_4kids](machinelearningforkids.co.uk) and click try it - then create a new project and fill 2 labels with data from `data.json`
+        - the data you fill in is the symptoms copy each symptom inside of " " then apply it to the label.
+        -  go back and select test and train your model
+
+   - Dowload the backend code from the backend branch then continue to do the following:
+       
+
    - Next click make - python and then copy your api key -> your then going to place key inside of .env file
      
      ```env
      api_key=key
      ```
+  - or if using [replit](https://replit.com/@MALIKWhitten/Apple-Doctor-backend) then refer to secrets -> click the three dots next to api_key and replace it with your own
+    ![Replit](https://github.com/MalikWhitten67/Apple-Doctor/assets/65188863/9a75d59b-6884-40fe-bd23-9a002eb09512)
   - Download the dataset from branch backend and then create a config.json file in the main dir where server.js is located
   ```json
   {
@@ -39,7 +47,7 @@ npm i
   - You can check the status of the model on the [status page](http://127.0.0.1:3000/status)
     
 * Database
-   - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command
+   - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command || you can use [Pockethost](https://pockethost.io) which can host it for free on their servers
      
      ```bash
      pocketbase serve
@@ -48,7 +56,9 @@ npm i
    - Swap the api url in the index.jsx file to yours
    - Now that you have an database swap to backend branch go into pocketbase folder and download the schema
    - Go back to your panel - then settings and under import collections either click to upload the file or copy and paste
-   - Now in index.jsx replace the current baseUrl with yours
+  * Run the frontend
+    Download the code and do the following
+  Now in index.jsx replace the current baseUrl with yours
    - Your done! that was easy now we need to just run the frontend
      
     ```bash
