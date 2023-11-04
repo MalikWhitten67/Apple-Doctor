@@ -191,7 +191,7 @@ export default function Message() {
         </div>
       </div>
 
-      <div className="flex relative flex-col gap-5  p-2   w-full mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
+      <div className="flex relative flex-col gap-5 p-5     w-full mt-4 xl:w-[40vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center lg:mx-auto">
         {chats.length > 0 && !loading ? (
           chats.map((chat) => {
             console.log(chat);
