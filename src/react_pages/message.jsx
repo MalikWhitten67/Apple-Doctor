@@ -54,6 +54,7 @@ export default function Message() {
         expand: "user,doctor,messages",
       })
       .then((res) => {
+        console.log(res);
         setChats(res.items);
         setLoading(false);
       });
