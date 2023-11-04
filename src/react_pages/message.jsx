@@ -194,7 +194,7 @@ export default function Message() {
       <div className="flex relative flex-col gap-5  p-2   w-full mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
         {chats.length > 0 && !loading ? (
           chats.map((chat) => {
-            console.log(chat)
+            console.log(chat);
             return (
               <div
                 key={chat.id}
@@ -271,6 +271,7 @@ export default function Message() {
         ref={compose}
         className="modal  w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto "
       >
+        zf
         <div className="   relative bg-white h-full p-5 w-full  xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto ">
           <div className="flex flex-row hero justify-between">
             <svg
@@ -390,24 +391,13 @@ export default function Message() {
                     {message.sent_by === api.authStore.model.id ? (
                       <div className="chat relative chat-end mb-6">
                         <div className="chat-image avatar w-10  rounded-full border border-1 border-base-300 ">
-                          {api.authStore.model.avatar ? (
-                            <img
-                              src={
-                                !api.authStore.model.isDoctor
-                                  ? `${api.baseUrl}/api/files/_pb_users_auth_/${api.authStore.model.id}/${api.authStore.model.avatar}`
-                                  : `${api.baseUrl}/api/files/t0bw8kyqy50fzxa/${api.authStore.model.id}/${api.authStore.model.avatar}`
-                              }
-                              className=" rounded-full"
-                            />
-                          ) : (
-                            <div className="avatar placeholder">
-                              <div className="bg-neutral-focus text-neutral-content  border-slate-200 rounded-full w-10">
-                                <span className="text-xl capitalize">
-                                  {api.authStore.model.name[0]}
-                                </span>
-                              </div>
+                          <div className="avatar placeholder">
+                            <div className="bg-neutral-focus text-neutral-content  border-slate-200 rounded-full w-10">
+                              <span className="text-xl capitalize">
+                                {api.authStore.model.name[0]}
+                              </span>
                             </div>
-                          )}
+                          </div>
                         </div>
                         <div className="chat-header">
                           You!
@@ -436,32 +426,21 @@ export default function Message() {
                     ) : (
                       <div key={message.id} className="chat mb-6 chat-start">
                         <div className="chat-image avatar w-10  rounded-full border border-1 border-base-300 ">
-                          {currentChat.expand?.avatar ? (
-                            <img
-                              src={
-                                !isDoctor
-                                  ? `${api.baseUrl}/api/files/_pb_users_auth_/${currentChat.expand?.user.id}/${currentChat.expand?.user.avatar}`
-                                  : `${api.baseUrl}/api/files/t0bw8kyqy50fzxa/${currentChat.expand?.doctor.id}/${currentChat.expand?.doctor.avatar}`
-                              }
-                              className=" rounded-full"
-                            />
-                          ) : (
-                            <div className="avatar placeholder">
-                              <div className="bg-neutral-focus text-neutral-content  border-slate-200 rounded-full w-10">
-                                <span className="text-xl capitalize">
-                                  {isDoctor
-                                    ? currentChat.expand?.doctor.name[0]
-                                    : currentChat.expand?.user.name[0]}
-                                </span>
-                              </div>
+                          <div className="avatar placeholder">
+                            <div className="bg-neutral-focus text-neutral-content  border-slate-200 rounded-full w-10">
+                              <span className="text-xl capitalize">
+                                {isDoctor
+                                  ? currentChat.expand?.user.name[0]
+                                  : currentChat.expand?.user.name[0]}
+                              </span>
                             </div>
-                          )}
+                          </div>
                         </div>
 
                         <div className="chat-header">
                           {isDoctor
-                            ? currentChat.expand?.doctor.name
-                            : currentChat.expand?.user.name}
+                            ? currentChat.expand?.user.name
+                            : currentChat.expand?.doctor.name}
                           <time className="text-xs opacity-50 mx-2">
                             {new Date(message.created)
                               .toLocaleTimeString()
