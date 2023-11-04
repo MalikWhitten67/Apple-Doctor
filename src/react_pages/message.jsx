@@ -199,29 +199,15 @@ export default function Message() {
                 className="flex flex-col cursor-pointer w-full  "
               >
                 <div className="flex hero  ">
-                  {(isDoctor && chat.expand.user.avatar) ||
-                  chat.expand.doctor.avatar ? (
-                    <img
-                      src={`${api.baseUrl}/api/files/_pb_users_auth_/${
-                        isDoctor ? chat.expand?.user.id : chat.expand?.doctor.id
-                      }/${
-                        isDoctor
-                          ? chat.expand?.user.avatar
-                          : chat.expand?.doctor.avatar
-                      }`}
-                      className="w-10 h-10 rounded-full border border-1 border-base-300 avatar"
-                    />
-                  ) : (
-                    <div className="avatar online placeholder">
-                      <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
-                        <span className="text-xl">
-                          {isDoctor
-                            ? chat.expand?.user.name[0]
-                            : chat.expand?.doctor.name[0]}
-                        </span>
-                      </div>
+                  <div className="avatar online placeholder">
+                    <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
+                      <span className="text-xl">
+                        {isDoctor
+                          ? chat.expand?.user.name[0]
+                          : chat.expand?.doctor.name[0]}
+                      </span>
                     </div>
-                  )}
+                  </div>
 
                   <div className="flex justify-between font-semibold w-full">
                     <div className="flex flex-col mx-2">
@@ -402,7 +388,7 @@ export default function Message() {
                     {message.sent_by === api.authStore.model.id ? (
                       <div className="chat relative chat-end mb-6">
                         <div className="chat-image avatar w-10  rounded-full border border-1 border-base-300 ">
-                          {api.authStore.model.avatar || edited.avatar ? (
+                          {api.authStore.model.avatar ? (
                             <img
                               src={
                                 !api.authStore.model.isDoctor
