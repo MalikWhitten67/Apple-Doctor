@@ -1,420 +1,420 @@
 {
-  "training_data": [
-    {
-      "label": "Lymphoma",
-      "image": "https://www.health.com/thmb/Yv89n1HpTELwztb_Aodjj04d6as=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Health-hodgkin-lymphoma-overview-7198174-desktop-final-b3ec5b2dcfef4e92850c546b905c31f7.jpg",
-      "description": "“Lymphoma” is the general term for cancer in your lymphatic system — the network of tissues, vessels and organs that help your body fight infection. ",
-      "linked_illnesses": "Hodgkin lymphoma,  non-Hodgkin lymphoma,  ",
-      "common_symptoms": "Persistent fatigue, Painless swelling of one or more lymph nodes in your neck, Drenching night sweats, Fever above 103 degrees Fahrenheit, Shortness of breath dyspnea ",
-      "suggestion": "Contact your healthcare provider any time you think your lymphoma symptoms are getting worse or you need help managing your treatment side effects.",
-      "symptoms": [
-        "Painless swelling of one or more lymph nodes in your neck",
-        "Persistent fatigue",
-        "family history of lymphoma",
-        "Fever above 103 degrees Fahrenheit",
-        "Drenching night sweats ",
-        "Shortness of breath dyspnea ",
-        "Unexplained weight loss"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Mental_Health_Disorder",
-      "image": "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?auto=format&fit=crop&q=80&w=1890&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Behavioral health (sometimes called mental health) includes a person’s psychological, emotional and social wellbeing. It shapes the way you think, feel, behave and interact with others.",
-      "linked_illnesses": "Anxiety, Depression",
-      "common_symptoms": "suicidal thoughts, stress, use of recreational drugs, avoiding being social with others, mood swings",
-      "suggestion": "Stop, get some help call the helpline: 1-800-985-5990 - also contact your doctor with the assessment.",
-      "symptoms": [
-        "Use of recreational drugs or alcohol",
-        "Avoiding social situations and friends",
-        "difficulty percieving reality hallucinations hallucinating",
-        "excessive worry of fear",
-        "fatigue and sleep problems",
-        "feelins of sadness or isolation",
-        "intense irritability or anger",
-        "Obsession with your physical appearance, weight or eating habits",
-        "mood swings",
-        "problems concentraiting paying attention",
-        "suicidal thoughts or self inflicting inflicted injury",
-        "frequent temper tantrums disobedience or aggression"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Hepatocellular_Carcinoma",
-      "image": "https://images.unsplash.com/photo-1649073586104-2ac3fab175ea?auto=format&fit=crop&q=80&w=2537&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Hepatocellular carcinoma is the most common form of liver cancer. It is a serious illness that can be life-threatening.",
-      "linked_illnesses": "liver cancer, juandice",
-      "common_symptoms": "very full after a small meal,losing weight without trying,  nauseous and vomiting",
-      "suggestion": "Check with your doctor if possible to schedule a surgery or get a screening.",
-      "symptoms": [
-        "losing weight without trying",
-        "very full after a small meal",
-        "unexplained weight loss",
-        "Nausea and vomiting",
-        "stomach pain or pain near right shoulder blade",
-        "knot under   ribs   right side",
-        "stomach feels swollen",
-        "itchy skin",
-        "eyes and skin are turning sallow or yellow"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Gallbladder_Cancer",
-      "image": "https://images.unsplash.com/photo-1649073586373-b6d49022d567?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Gallbladder cancer is a rare form of cancer that often doesn’t cause signs or symptoms in the early stages. You’re more at risk of gallbladder cancer if you have conditions like gallstones or gallbladder inflammation. ",
-      "linked_illnesses": "Juandice, fever",
-      "common_symptoms": "A lump below the rib cage, Juandice yellow skin yellow eyes, nausea loss of apetite",
-      "suggestion": "Check with your doctor if possible to come in for a screening.",
-      "symptoms": [
-        "Upper adominal pain",
-        "Juandice yellow skin yellow eyes",
-        "lumps in abdomen",
-        "unexplained weight loss",
-        "Nausea and vomiting",
-        "Bloating fever"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Liver_Cancer",
-      "image": "https://images.unsplash.com/photo-1649073586373-b6d49022d567?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "Primary liver cancer is a life-threatening illness and one of the fastest growing cancer types in the United States. ",
-      "linked_illnesses": "Biliary_Stricture",
-      "common_symptoms": "A lump below the rib cage, Juandice yellow skin yellow eyes, nausea loss of apetite",
-      "suggestion": "Check with your doctor if possible to come in for a screening.",
-      "symptoms": [
-        "A lump below the rib cage",
-        "Juandice yellow skin yellow eyes",
-        "unexplained weight loss",
-        "nausea loss of apetite",
-        "fatigue dark colored urine"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Hypogeusia",
-      "image": "https://www.vcuhealth.org/-/media/media/featurednewsimages/loss-of-smell_resized.ashx",
-      "description": "Hypogeusia is a type of taste disorder. People with hypogeusia have a weakened or diminished sense of taste.",
-      "linked_illnesses": "Covid19(Coronavirus)",
-      "common_symptoms": "weakend sense of taste, inability to detect tastes, cannot distinguish different tastes",
-      "suggestion": "Contact your doctor to get an  assessment.",
-      "symptoms": [
-        "allergies",
-        "nasal polyps",
-        "viral infections flu cold covid covid-19",
-        "tooth decay gum disease diabetes thyroid disease",
-        "liver disease kidney disease",
-        "vitamin b12 deficiency",
-        "smoking",
-        "poor hygiene",
-        "Aging  hypogeusia",
-        "weakend sense of taste",
-        "inability to detect certain tastes",
-        "dificulty distinguishing different tastes"
-      ],
-      "severity": "watch"
-    },
-    {
-      "label": "Coronavirus_COVID",
-      "image": "https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&q=80&w=2075&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "COVID-19 is caused by the SARS-CoV-2 virus. COVID-19 can cause mild to severe respiratory illness, including death.",
-      "linked_illnesses": "Long Covid, Pneumonia, Viral Infections, MERS, ARDS",
-      "common_symptoms": "fever, headache, chills, nasal congestion, difficulty breathing",
-      "suggestion": "According to current CDC recommendations, you should self-isolate until. It's been five days since your symptoms first appeared and your symptoms are improving.You've not had a fever for 24 hours and you've not used fever-lowing medications during this time.",
-      "symptoms": [
-        "fever or headache",
-        "cold chills",
-        "muscle contractions body aches",
-        "nasal congestion runny nose",
-        "light headed fatigue",
-        "vomiting dry cough",
-        "dificulty breathing"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "COVID_Pneumonia",
-      "name": "",
-      "image": "https://images.unsplash.com/photo-1584118624012-df056829fbd0?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "COVID pneumonia is a lung infection caused by SARS CoV-2, the virus that causes COVID-19. It causes fluid and inflammation in your lungs. ",
-      "suggestion": "According to current CDC recommendations, you should self-isolate until. It's been five days since your symptoms first appeared and your symptoms are improving.You've not had a fever for 24 hours and you've not used fever-lowing medications during this time.",
-      "common_symptoms": "Dizziness, extreme, fatigue, fever or very tired, sore throat, difficulty with breathing",
-      "linked_illnesses": "Covid19, Hypogeusia, MERS, Anosmia",
-      "symptoms": [
-        "dizziness extreme fatigue",
-        "fever incredibly tired very tired",
-        "diarrhea   diarrhea runny nose stomache aches",
-        "stomach complications weakend muscles",
-        "sharp pains",
-        "sore throat",
-        "dry cough",
-        "difficulty with breathing",
-        "confusion chest pain tightness",
-        "blueish lips skin or nails cyanosis",
-        "loss of taste loss of smell",
-        "weakend senses"
-      ],
-      "severity": "watch"
-    },
-    {
-      "label": "AA_Amyloidosis",
-      "description": "AA amyloidosis, or secondary amyloidosis, is one type of the rare disorder amyloidosis. This disorder happens when proteins in your body mutate, changing form and gathering on your organs and tissues. ",
-      "suggestion": "Download the assessment and reach out to your doctor to explore treatment options.",
-      "common_symptoms": "Swollen feet or legs,  foamy frothy pee, chronic diarrhea, low blood pressure",
-      "symptoms": [
-        "swollen feet or legs",
-        "foamy frothy pee",
-        "peeing less than normal",
-        "chronic diarrhea",
-        "enlarged kidney",
-        "low blood pressure",
-        "nausea and vomiting."
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Alpers_Disease",
-      "image": "https://s3.amazonaws.com/HMP/c360/imported/inline-images/2003C360_Alpers_1.png",
-      "suggestion": "Please obtain the assessment and reach out to your physician to explore potential treatment options.",
-      "description": "Alpers disease is a rare genetic disorder that leads to dementia, liver failure and seizures. Symptoms usually start between ages 2 and 4 or ages 17 and 24. ",
-      "common_symptoms": "Anxiety and depression, brain disease (encephalopathy),  (hypoglycemia) low blood sugar, lack of growth, migraine headaches and hallucinations",
-      "symptoms": [
-        "anxiety and depression",
-        "brain disease encephalopathy",
-        "hypoglycemia low blood sugar.",
-        "lack of growth",
-        "migraine headaches and hallucinations",
-        "muscle stiffness spasticity",
-        "muscle twitching",
-        "dementia",
-        "loss of controll over arms and legs"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Allergies",
-      "image": "https://images.unsplash.com/photo-1610021684483-b06bf8ed5a41?auto=format&fit=crop&q=80&w=2671&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "suggestion": "If symptoms worsen beyond the usual, get in touch with your doctor. You can manage this condition at home using over-the-counter remedies.",
-      "description": "Allergies are your body’s reaction to normally harmless substances.",
-      "common_symptoms": "sneezing consistently, runny blocked nose, red itchy eyes, sore throat, wheezing or coughing, swelling and hives around the mouth.",
-      "symptoms": [
-        "sneezing",
-        "heavy consistent sneezing",
-        "runny blocked nose",
-        "red itchy twitching eye",
-        "sore throat hurts to swallow",
-        "burning feeling in throat",
-        "wheezing or coughing",
-        "worsening of asthma or eczema symptoms",
-        "hives swelling around your mouth",
-        "itchy all over your body or a specfic part of your body"
-      ],
-      "severity": "watch"
-    },
-    {
-      "label": "Abdominal_Aortic_Aneurysm",
-      "image": "https://1.bp.blogspot.com/-O1jR5z0xgrM/XQUcZdept6I/AAAAAAAAEPI/woQtwuPjl2gOw-Ei5VEXrh6VRjNDwLL3wCLcBGAs/s1600/id005_cellulitis_img1_au.large.jpg",
-      "suggestion": "We advise reaching out to your doctor, providing them with the assessment, and exploring the possibility of undergoing a screening.",
-      "description": "An abdominal aortic aneurysm (AAA) is a bulge in the part of your aorta that runs through your belly.",
-      "common_symptoms": "fever, cough headache, low blood pressure, dizziness or fainting, nausea or vommiting",
-      "symptoms": [
-        "severe pain near belly button or lower legs",
-        "shortness of breath",
-        "fast heartbeat",
-        "low blood pressure",
-        "dizziness or fainting",
-        "nausea  or vommiting",
-        "clammy sweaty hands"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Aphasia",
-      "image": "https://th.bing.com/th/id/OIP.u_-LVit-cE0TszM_yO-KlgHaFW?pid=ImgDet&rs=1",
-      "description": "Aphasia is a brain disorder where a person has trouble speaking or understanding other people speaking.",
-      "suggestion": "Contact your doctor with this assessment to determine the potential treatment for the underlying condition.",
-      "common_symptoms": "problems with understanding, struggles with repition, loss of fluency, struggling to do basic tasks, low thinking capibilities ",
-      "symptoms": [
-        "problems with understanding",
-        "struggles with repition",
-        "loss of fluency",
-        "struggling to do basic tasks with zero complexity",
-        "low thinking capibilities"
-      ],
-      "severity": "watch"
-    },
-    {
-      "label": "Abdominal_Migraine",
-      "image": "https://th.bing.com/th/id/OIP.zzOf0oisUczZxVXnVdVQEgHaE8?pid=ImgDet&rs=1",
-      "description": "Abdominal migraine is a condition that causes episodes of moderate to severe abdominal (belly) pain lasting one to 72 hours. ",
-      "suggestion": "Contact your doctor with this assessment to determine the potential treatment if lasts more than 72 hours",
-      "common_symptoms": "pale like appearance, loss of apetite, vomiting, headache episodes",
-      "symptoms": [
-        "pale appearance",
-        "loss of apetite",
-        "vomiting",
-        "headache episodes"
-      ],
-      "severity": "mild"
-    },
-    {
-      "label": "Aphonia_Loss_of_Voice",
-      "image": "https://i3.wp.com/static.tuasaude.com/media/article/ci/wg/afonia_40221_l.jpg",
-      "suggestion": "This illness is mild and can be self-assessed. If it worsens, consider consulting your doctor and try drinking hot liquids like tea.",
-      "description": "Inability to speak clearly low tone.",
-      "common_symptoms": "loss of voice, low tone unable to be heard, dry raspy throat feeling",
-      "symptoms": [
-        "loss of voice",
-        "low tone unable to be heard",
-        "dry raspy throat feeling"
-      ],
-      "severity": "mild"
-    },
-    {
-      "label": "Alzheimer's_Disease",
-      "image": "https://img.huffingtonpost.com/asset/58404fb21a00002500ccab45.jpeg?ops=1910_1000",
-      "description": "Alzheimer’s disease causes a decline in memory, thinking, learning and organizing skills over time. ",
-      "suggestions": "Monitor the illness keep contact with your doctor and try exercises to help fix which symptoms are prevalent",
-      "common_symptoms": "loss of memory, unable to complete specific tasks, zhoning out, loss of speech",
-      "symptoms": [
-        "loss of memory",
-        "unable to do certain tasks effectively",
-        "zhoning out when asked a question",
-        "loss of speech"
-      ],
-      "severity": "watch"
-    },
-    {
-      "label": "Biliary_Stricture",
-      "description": "Biliary strictures, also called bile duct strictures, occur when the ducts that carry bile from your liver to your small intestine become narrow or blocked. ",
-      "suggestion": "Contact your doctor with this assessment to determine the potential treatment",
-      "common_symptoms": "abdominal pain upper right side, fever and chills, changes in stool color, itchy skin, loss of apetite, nausea and vommiting",
-      "linked_illnesses": "Galblader cancer, Hepatocellular carcinoma, Liver cancer",
-      "symptoms": [
-        "abdominal pain upper right side",
-        "fever and chills",
-        "changes in stool poop color gray pale colors",
-        "itchy skin",
-        "loss of apetite",
-        "jaundice nausea   vomiting",
-        "Galblader cancer Hepatocellular carcinoma",
-        "Lymphoma Metastasis (metastatic cancer) Small intestine cancer"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Bacteremia",
-      "image": "https://th.bing.com/th/id/OIP.w5ABNFYTYt4WlBBbVdayYgHaE7?pid=ImgDet&rs=1",
-      "description": "Bacteremia is when you have bacteria in your blood",
-      "suggestion": "Contact your doctor with this assessment to determine the potential treatment",
-      "common_symptoms": "chills, fast heart rate (tachycardia), diarrhea, rapid breathing and hyperventilation",
-      "linked_illnesses": "Mild Fever",
-      "symptoms": [
-        "chills",
-        "fast heart rate tachycardia",
-        "low blood pressure hypotension",
-        "abdominal pain nausea and vommiting",
-        "diarrhea",
-        "rapid breathing hyperventilation.",
-        "scrapes and cuts burns ",
-        "brushing or flossing too fast viciously",
-        "medical precidures surgery catheterization  breathing tubes or blood donations."
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Broken_Ankle",
-      "image": "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?auto=format&fit=crop&q=80&w=2096&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "suggestion": "Maintain minimal pressure on the ankle, and consult your doctor for treatment.",
-      "description": "Broken ankles, or ankle fractures, are one of the most common causes of ankle pain.",
-      "common_symptoms": "sever pain, hurts when touching, bruised or swollen",
-      "linked_illnesses": "Sprained Ankle",
-      "symptoms": [
-        "severe pain in the ankle",
-        "hurts when touching ankle",
-        "bruised or swollen ankle"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Broken_Femur",
-      "description": "A broken femur is a serious injury that requires immediate medical care. Broken femurs are treated with surgery and physical therapy.",
-      "common_symptoms": "severe pain, cannot put weight on injured leg, peices of femur break skin causing bleeding, parts of the thigh are swollen, injured leg is shorter than the uninjured leg.",
-      "symptoms": [
-        "severe pain",
-        "cannot put weight on injured leg",
-        "peices of femur breaking through skin and cause bleeding",
-        "bruised thigh scars marks",
-        "parts of the thigh is swollen",
-        "injured leg is shorter then uninjured leg"
-      ],
-      "severity": "severe"
-    },
-    {
-      "label": "Bloated_Stomache",
-      "image": "https://images.unsplash.com/photo-1625851623647-0dcf2911b563?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "suggestion": "The duration for it to subside can range from a few hours to a maximum of two days, depending on the amount of liquids or foods consumed.",
-      "description": "A bloated stomach feels tight, full and often painful. You might feel bloated even if you don’t have a distended abdomen.",
-      "common_symptoms": "full stomach inable to do tasks properly, cramps, hurts when moving, feeling like you are going to throwup, constant runs to the bathroom",
-      "symptoms": [
-        "full stomach inable to partake in tasks properly",
-        "stomach cramps from eating",
-        "bad cramping after drinking liquids",
-        "stomach hurts when moving after eating a big meal",
-        "feeling like you are going to vomit",
-        "constant runs to the bathroom"
-      ],
-      "severity": "mild"
-    },
-    {
-      "label": "Sprained_Ankle",
-      "image": "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?auto=format&fit=crop&q=80&w=2096&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "suggestion": "To alleviate pressure on the injured ankle, consider wearing a compression sock if you must work or engage in activities. Swelling and discomfort should subside within a few hours.",
-      "description": "A sprained ankle is a common injury that occurs when the ankle ligaments are torn or stretched too far, often after a fall, or if you roll or twist your ankle.",
-      "common_symptoms": "mild pain when putting pressure on ankle, tender to touch, swelling and bruising, difficulty when walking",
-      "linked_illnesses": "Broken Ankle",
-      "symptoms": [
-        "mild pain  when applying pressure to affected area of the ankle",
-        "ankle is tender to touch very sensitive",
-        "swelling bruising",
-        "difficulty when trying to walk"
-      ],
-      "severity": "mild"
-    },
-    {
-      "label": "Common_Cold",
-      "image": "https://images.unsplash.com/photo-1516126491303-6f54240c8491?auto=format&fit=crop&q=80&w=1965&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "description": "The common cold is an infection of your nose, sinuses, throat and windpipe. Colds spread easily, especially within homes, classrooms and workplaces.",
-      "suggestion": "If it persists for more than a week or 10 days, get in touch with your doctor to discuss potential treatment options.",
-      "common_symptoms": "sneezing and runny nose, nasal congestion, hoarsness coughing, fever, body aches, fatigue, headache, chills",
-      "linked_illnesses": "flu, covid",
-      "symptoms": [
-        "sneezing and runy nose",
-        "stuff nose hard to breath in one side changes to the other side nasal congestion",
-        "hoarseness coughing",
-        "fever body aches fatigue",
-        "headache chills"
-      ],
-      "severity": "mild"
-    },
-    {
-      "label": "Flu",
-      "image": "https://images.unsplash.com/photo-1576765608360-c3fc79ca9964?auto=format&fit=crop&q=80&w=1877&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "suggestion": "Stay in touch with your doctor and follow home remedies, prioritize rest, and avoid outdoor activities.",
-      "description": "A contagious respiratory illness caused by influenza viruses that infect the nose, throat, and lungs.",
-      "common_symptoms": "fever, headache, severe dry cough, intense pain and fatigue, overheating",
-      "linked_illnesses": "cold",
-      "symptoms": [
-        "fever body is 100 degrees",
-        "overheating",
-        "headache",
-        "intense pain and fatigue",
-        "severe dry cough"
-      ],
-      "severity": "watch"
-    }
-  ]
+    "training_data": [
+        {
+            "label": "Lymphoma",
+            "image": "https://www.health.com/thmb/Yv89n1HpTELwztb_Aodjj04d6as=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Health-hodgkin-lymphoma-overview-7198174-desktop-final-b3ec5b2dcfef4e92850c546b905c31f7.jpg",
+            "description": "“Lymphoma” is the general term for cancer in your lymphatic system — the network of tissues, vessels and organs that help your body fight infection. ",
+            "linked_illnesses": "Hodgkin lymphoma,  non-Hodgkin lymphoma,  ",
+            "common_symptoms": "Persistent fatigue, Painless swelling of one or more lymph nodes in your neck, Drenching night sweats, Fever above 103 degrees Fahrenheit, Shortness of breath dyspnea ",
+            "suggestion": "Contact your healthcare provider any time you think your lymphoma symptoms are getting worse or you need help managing your treatment side effects.",
+            "symptoms": [
+                "Painless swelling of one or more lymph nodes in your neck",
+                "Persistent fatigue",
+                "family history of lymphoma",
+                "Fever above 103 degrees Fahrenheit",
+                "Drenching night sweats ",
+                "Shortness of breath dyspnea ",
+                "Unexplained weight loss"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Mental_Health_Disorder",
+            "image": "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?auto=format&fit=crop&q=80&w=1890&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "Behavioral health (sometimes called mental health) includes a person’s psychological, emotional and social wellbeing. It shapes the way you think, feel, behave and interact with others.",
+            "linked_illnesses": "Anxiety, Depression",
+            "common_symptoms": "suicidal thoughts, stress, use of recreational drugs, avoiding being social with others, mood swings",
+            "suggestion": "Stop, get some help call the helpline:  1-800-662-HELP (4357) - also contact your doctor with the assessment.",
+            "symptoms": [
+                "Use of recreational drugs or alcohol",
+                "Avoiding social situations and friends",
+                "difficulty percieving reality hallucinations hallucinating",
+                "excessive worry of fear",
+                "fatigue and sleep problems",
+                "feelins of sadness or isolation",
+                "intense irritability or anger",
+                "Obsession with your physical appearance, weight or eating habits",
+                "mood swings",
+                "problems concentraiting paying attention",
+                "suicidal thoughts or self inflicting inflicted injury",
+                "frequent temper tantrums disobedience or aggression"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Hepatocellular_Carcinoma",
+            "image": "https://images.unsplash.com/photo-1649073586104-2ac3fab175ea?auto=format&fit=crop&q=80&w=2537&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "Hepatocellular carcinoma is the most common form of liver cancer. It is a serious illness that can be life-threatening.",
+            "linked_illnesses": "liver cancer, juandice",
+            "common_symptoms": "very full after a small meal,losing weight without trying,  nauseous and vomiting",
+            "suggestion": "Check with your doctor if possible to schedule a surgery or get a screening.",
+            "symptoms": [
+                "losing weight without trying",
+                "very full after a small meal",
+                "unexplained weight loss",
+                "Nausea and vomiting",
+                "stomach pain or pain near right shoulder blade",
+                "knot under   ribs   right side",
+                "stomach feels swollen",
+                "itchy skin",
+                "eyes and skin are turning sallow or yellow"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Gallbladder_Cancer",
+            "image": "https://images.unsplash.com/photo-1649073586373-b6d49022d567?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "Gallbladder cancer is a rare form of cancer that often doesn’t cause signs or symptoms in the early stages. You’re more at risk of gallbladder cancer if you have conditions like gallstones or gallbladder inflammation. ",
+            "linked_illnesses": "Juandice, fever",
+            "common_symptoms": "A lump below the rib cage, Juandice yellow skin yellow eyes, nausea loss of apetite",
+            "suggestion": "Check with your doctor if possible to come in for a screening.",
+            "symptoms": [
+                "Upper adominal pain",
+                "Juandice yellow skin yellow eyes",
+                "lumps in abdomen",
+                "unexplained weight loss",
+                "Nausea and vomiting",
+                "Bloating fever"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Liver_Cancer",
+            "image": "https://images.unsplash.com/photo-1649073586373-b6d49022d567?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "Primary liver cancer is a life-threatening illness and one of the fastest growing cancer types in the United States. ",
+            "linked_illnesses": "Biliary_Stricture",
+            "common_symptoms": "A lump below the rib cage, Juandice yellow skin yellow eyes, nausea loss of apetite",
+            "suggestion": "Check with your doctor if possible to come in for a screening.",
+            "symptoms": [
+                "A lump below the rib cage",
+                "Juandice yellow skin yellow eyes",
+                "unexplained weight loss",
+                "nausea loss of apetite",
+                "fatigue dark colored urine"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Hypogeusia",
+            "image": "https://www.vcuhealth.org/-/media/media/featurednewsimages/loss-of-smell_resized.ashx",
+            "description": "Hypogeusia is a type of taste disorder. People with hypogeusia have a weakened or diminished sense of taste.",
+            "linked_illnesses": "Covid19(Coronavirus)",
+            "common_symptoms": "weakend sense of taste, inability to detect tastes, cannot distinguish different tastes",
+            "suggestion": "Contact your doctor to get an  assessment.",
+            "symptoms": [
+                "allergies",
+                "nasal polyps",
+                "viral infections flu cold covid covid-19",
+                "tooth decay gum disease diabetes thyroid disease",
+                "liver disease kidney disease",
+                "vitamin b12 deficiency",
+                "smoking",
+                "poor hygiene",
+                "Aging  hypogeusia",
+                "weakend sense of taste",
+                "inability to detect certain tastes",
+                "dificulty distinguishing different tastes"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "Coronavirus_COVID",
+            "image": "https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&q=80&w=2075&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "COVID-19 is caused by the SARS-CoV-2 virus. COVID-19 can cause mild to severe respiratory illness, including death.",
+            "linked_illnesses": "Long Covid, Pneumonia, Viral Infections, MERS, ARDS",
+            "common_symptoms": "fever, headache, chills, nasal congestion, difficulty breathing",
+            "suggestion": "According to current CDC recommendations, you should self-isolate until. It's been five days since your symptoms first appeared and your symptoms are improving.You've not had a fever for 24 hours and you've not used fever-lowing medications during this time.",
+            "symptoms": [
+                "fever or headache",
+                "cold chills",
+                "muscle contractions body aches",
+                "nasal congestion runny nose",
+                "light headed fatigue",
+                "vomiting dry cough",
+                "dificulty breathing"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "COVID_Pneumonia",
+            "name": "",
+            "image": "https://images.unsplash.com/photo-1584118624012-df056829fbd0?auto=format&fit=crop&q=80&w=2532&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "COVID pneumonia is a lung infection caused by SARS CoV-2, the virus that causes COVID-19. It causes fluid and inflammation in your lungs. ",
+            "suggestion": "According to current CDC recommendations, you should self-isolate until. It's been five days since your symptoms first appeared and your symptoms are improving.You've not had a fever for 24 hours and you've not used fever-lowing medications during this time.",
+            "common_symptoms": "Dizziness, extreme, fatigue, fever or very tired, sore throat, difficulty with breathing",
+            "linked_illnesses": "Covid19, Hypogeusia, MERS, Anosmia",
+            "symptoms": [
+                "dizziness extreme fatigue",
+                "fever incredibly tired very tired",
+                "diarrhea   diarrhea runny nose stomache aches",
+                "stomach complications weakend muscles",
+                "sharp pains",
+                "sore throat",
+                "dry cough",
+                "difficulty with breathing",
+                "confusion chest pain tightness",
+                "blueish lips skin or nails cyanosis",
+                "loss of taste loss of smell",
+                "weakend senses"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "AA_Amyloidosis",
+            "description": "AA amyloidosis, or secondary amyloidosis, is one type of the rare disorder amyloidosis. This disorder happens when proteins in your body mutate, changing form and gathering on your organs and tissues. ",
+            "suggestion": "Download the assessment and reach out to your doctor to explore treatment options.",
+            "common_symptoms": "Swollen feet or legs,  foamy frothy pee, chronic diarrhea, low blood pressure",
+            "symptoms": [
+                "swollen feet or legs",
+                "foamy frothy pee",
+                "peeing less than normal",
+                "chronic diarrhea",
+                "enlarged kidney",
+                "low blood pressure",
+                "nausea and vomiting."
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Alpers_Disease",
+            "image": "https://s3.amazonaws.com/HMP/c360/imported/inline-images/2003C360_Alpers_1.png",
+            "suggestion": "Please obtain the assessment and reach out to your physician to explore potential treatment options.",
+            "description": "Alpers disease is a rare genetic disorder that leads to dementia, liver failure and seizures. Symptoms usually start between ages 2 and 4 or ages 17 and 24. ",
+            "common_symptoms": "Anxiety and depression, brain disease (encephalopathy),  (hypoglycemia) low blood sugar, lack of growth, migraine headaches and hallucinations",
+            "symptoms": [
+                "anxiety and depression",
+                "brain disease encephalopathy",
+                "hypoglycemia low blood sugar.",
+                "lack of growth",
+                "migraine headaches and hallucinations",
+                "muscle stiffness spasticity",
+                "muscle twitching",
+                "dementia",
+                "loss of controll over arms and legs"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Allergies",
+            "image": "https://images.unsplash.com/photo-1610021684483-b06bf8ed5a41?auto=format&fit=crop&q=80&w=2671&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "If symptoms worsen beyond the usual, get in touch with your doctor. You can manage this condition at home using over-the-counter remedies.",
+            "description": "Allergies are your body’s reaction to normally harmless substances.",
+            "common_symptoms": "sneezing consistently, runny blocked nose, red itchy eyes, sore throat, wheezing or coughing, swelling and hives around the mouth.",
+            "symptoms": [
+                "sneezing",
+                "heavy consistent sneezing",
+                "runny blocked nose",
+                "red itchy twitching eye",
+                "sore throat hurts to swallow",
+                "burning feeling in throat",
+                "wheezing or coughing",
+                "worsening of asthma or eczema symptoms",
+                "hives swelling around your mouth",
+                "itchy all over your body or a specfic part of your body"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "Abdominal_Aortic_Aneurysm",
+            "image": "https://1.bp.blogspot.com/-O1jR5z0xgrM/XQUcZdept6I/AAAAAAAAEPI/woQtwuPjl2gOw-Ei5VEXrh6VRjNDwLL3wCLcBGAs/s1600/id005_cellulitis_img1_au.large.jpg",
+            "suggestion": "We advise reaching out to your doctor, providing them with the assessment, and exploring the possibility of undergoing a screening.",
+            "description": "An abdominal aortic aneurysm (AAA) is a bulge in the part of your aorta that runs through your belly.",
+            "common_symptoms": "fever, cough headache, low blood pressure, dizziness or fainting, nausea or vommiting",
+            "symptoms": [
+                "severe pain near belly button or lower legs",
+                "shortness of breath",
+                "fast heartbeat",
+                "low blood pressure",
+                "dizziness or fainting",
+                "nausea  or vommiting",
+                "clammy sweaty hands"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Aphasia",
+            "image": "https://th.bing.com/th/id/OIP.u_-LVit-cE0TszM_yO-KlgHaFW?pid=ImgDet&rs=1",
+            "description": "Aphasia is a brain disorder where a person has trouble speaking or understanding other people speaking.",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment for the underlying condition.",
+            "common_symptoms": "problems with understanding, struggles with repition, loss of fluency, struggling to do basic tasks, low thinking capibilities ",
+            "symptoms": [
+                "problems with understanding",
+                "struggles with repition",
+                "loss of fluency",
+                "struggling to do basic tasks with zero complexity",
+                "low thinking capibilities"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "Abdominal_Migraine",
+            "image": "https://th.bing.com/th/id/OIP.zzOf0oisUczZxVXnVdVQEgHaE8?pid=ImgDet&rs=1",
+            "description": "Abdominal migraine is a condition that causes episodes of moderate to severe abdominal (belly) pain lasting one to 72 hours. ",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment if lasts more than 72 hours",
+            "common_symptoms": "pale like appearance, loss of apetite, vomiting, headache episodes",
+            "symptoms": [
+                "pale appearance",
+                "loss of apetite",
+                "vomiting",
+                "headache episodes"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Aphonia_Loss_of_Voice",
+            "image": "https://i3.wp.com/static.tuasaude.com/media/article/ci/wg/afonia_40221_l.jpg",
+            "suggestion": "This illness is mild and can be self-assessed. If it worsens, consider consulting your doctor and try drinking hot liquids like tea.",
+            "description": "Inability to speak clearly low tone.",
+            "common_symptoms": "loss of voice, low tone unable to be heard, dry raspy throat feeling",
+            "symptoms": [
+                "loss of voice",
+                "low tone unable to be heard",
+                "dry raspy throat feeling"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Alzheimers_Disease",
+            "image": "https://img.huffingtonpost.com/asset/58404fb21a00002500ccab45.jpeg?ops=1910_1000",
+            "description": "Alzheimer’s disease causes a decline in memory, thinking, learning and organizing skills over time. ",
+            "suggestions": "Monitor the illness keep contact with your doctor and try exercises to help fix which symptoms are prevalent",
+            "common_symptoms": "loss of memory, unable to complete specific tasks, zhoning out, loss of speech",
+            "symptoms": [
+                "loss of memory",
+                "unable to do certain tasks effectively",
+                "zhoning out when asked a question",
+                "loss of speech"
+            ],
+            "severity": "watch"
+        },
+        {
+            "label": "Biliary_Stricture",
+            "description": "Biliary strictures, also called bile duct strictures, occur when the ducts that carry bile from your liver to your small intestine become narrow or blocked. ",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment",
+            "common_symptoms": "abdominal pain upper right side, fever and chills, changes in stool color, itchy skin, loss of apetite, nausea and vommiting",
+            "linked_illnesses": "Galblader cancer, Hepatocellular carcinoma, Liver cancer",
+            "symptoms": [
+                "abdominal pain upper right side",
+                "fever and chills",
+                "changes in stool poop color gray pale colors",
+                "itchy skin",
+                "loss of apetite",
+                "jaundice nausea   vomiting",
+                "Galblader cancer Hepatocellular carcinoma",
+                "Lymphoma Metastasis (metastatic cancer) Small intestine cancer"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Bacteremia",
+            "image": "https://th.bing.com/th/id/OIP.w5ABNFYTYt4WlBBbVdayYgHaE7?pid=ImgDet&rs=1",
+            "description": "Bacteremia is when you have bacteria in your blood",
+            "suggestion": "Contact your doctor with this assessment to determine the potential treatment",
+            "common_symptoms": "chills, fast heart rate (tachycardia), diarrhea, rapid breathing and hyperventilation",
+            "linked_illnesses": "Mild Fever",
+            "symptoms": [
+                "chills",
+                "fast heart rate tachycardia",
+                "low blood pressure hypotension",
+                "abdominal pain nausea and vommiting",
+                "diarrhea",
+                "rapid breathing hyperventilation.",
+                "scrapes and cuts burns ",
+                "brushing or flossing too fast viciously",
+                "medical precidures surgery catheterization  breathing tubes or blood donations."
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Broken_Ankle",
+            "image": "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?auto=format&fit=crop&q=80&w=2096&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "Maintain minimal pressure on the ankle, and consult your doctor for treatment.",
+            "description": "Broken ankles, or ankle fractures, are one of the most common causes of ankle pain.",
+            "common_symptoms": "sever pain, hurts when touching, bruised or swollen",
+            "linked_illnesses": "Sprained Ankle",
+            "symptoms": [
+                "severe pain in the ankle",
+                "hurts when touching ankle",
+                "bruised or swollen ankle"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Broken_Femur",
+            "description": "A broken femur is a serious injury that requires immediate medical care. Broken femurs are treated with surgery and physical therapy.",
+            "common_symptoms": "severe pain, cannot put weight on injured leg, peices of femur break skin causing bleeding, parts of the thigh are swollen, injured leg is shorter than the uninjured leg.",
+            "symptoms": [
+                "severe pain",
+                "cannot put weight on injured leg",
+                "peices of femur breaking through skin and cause bleeding",
+                "bruised thigh scars marks",
+                "parts of the thigh is swollen",
+                "injured leg is shorter then uninjured leg"
+            ],
+            "severity": "severe"
+        },
+        {
+            "label": "Bloated_Stomache",
+            "image": "https://images.unsplash.com/photo-1625851623647-0dcf2911b563?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "The duration for it to subside can range from a few hours to a maximum of two days, depending on the amount of liquids or foods consumed.",
+            "description": "A bloated stomach feels tight, full and often painful. You might feel bloated even if you don’t have a distended abdomen.",
+            "common_symptoms": "full stomach inable to do tasks properly, cramps, hurts when moving, feeling like you are going to throwup, constant runs to the bathroom",
+            "symptoms": [
+                "full stomach inable to partake in tasks properly",
+                "stomach cramps from eating",
+                "bad cramping after drinking liquids",
+                "stomach hurts when moving after eating a big meal",
+                "feeling like you are going to vomit",
+                "constant runs to the bathroom"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Sprained_Ankle",
+            "image": "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?auto=format&fit=crop&q=80&w=2096&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "To alleviate pressure on the injured ankle, consider wearing a compression sock if you must work or engage in activities. Swelling and discomfort should subside within a few hours.",
+            "description": "A sprained ankle is a common injury that occurs when the ankle ligaments are torn or stretched too far, often after a fall, or if you roll or twist your ankle.",
+            "common_symptoms": "mild pain when putting pressure on ankle, tender to touch, swelling and bruising, difficulty when walking",
+            "linked_illnesses": "Broken Ankle",
+            "symptoms": [
+                "mild pain  when applying pressure to affected area of the ankle",
+                "ankle is tender to touch very sensitive",
+                "swelling bruising",
+                "difficulty when trying to walk"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Common_Cold",
+            "image": "https://images.unsplash.com/photo-1516126491303-6f54240c8491?auto=format&fit=crop&q=80&w=1965&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "The common cold is an infection of your nose, sinuses, throat and windpipe. Colds spread easily, especially within homes, classrooms and workplaces.",
+            "suggestion": "If it persists for more than a week or 10 days, get in touch with your doctor to discuss potential treatment options.",
+            "common_symptoms": "sneezing and runny nose, nasal congestion, hoarsness coughing, fever, body aches, fatigue, headache, chills",
+            "linked_illnesses": "flu, covid",
+            "symptoms": [
+                "sneezing and runy nose",
+                "stuff nose hard to breath in one side changes to the other side nasal congestion",
+                "hoarseness coughing",
+                "fever body aches fatigue",
+                "headache chills"
+            ],
+            "severity": "mild"
+        },
+        {
+            "label": "Flu",
+            "image": "https://images.unsplash.com/photo-1576765608360-c3fc79ca9964?auto=format&fit=crop&q=80&w=1877&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "suggestion": "Stay in touch with your doctor and follow home remedies, prioritize rest, and avoid outdoor activities.",
+            "description": "A contagious respiratory illness caused by influenza viruses that infect the nose, throat, and lungs.",
+            "common_symptoms": "fever, headache, severe dry cough, intense pain and fatigue, overheating",
+            "linked_illnesses": "cold",
+            "symptoms": [
+                "fever body is 100 degrees",
+                "overheating",
+                "headache",
+                "intense pain and fatigue",
+                "severe dry cough"
+            ],
+            "severity": "watch"
+        }
+    ]
 }
