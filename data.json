@@ -10,12 +10,34 @@
       "symptoms": [
         "Painless swelling of one or more lymph nodes in your neck",
         "Persistent fatigue",
-        "Juandice yellow skin yellow eyes",
         "family history of lymphoma",
         "Fever above 103 degrees Fahrenheit",
         "Drenching night sweats ",
         "Shortness of breath dyspnea ",
         "Unexplained weight loss"
+      ],
+      "severity": "severe"
+    },
+    {
+      "label": "Mental_Health_Disorder",
+      "image": "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?auto=format&fit=crop&q=80&w=1890&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Behavioral health (sometimes called mental health) includes a person’s psychological, emotional and social wellbeing. It shapes the way you think, feel, behave and interact with others.",
+      "linked_illnesses": "Anxiety, Depression",
+      "common_symptoms": "suicidal thoughts, stress, use of recreational drugs, avoiding being social with others, mood swings",
+      "suggestion": "Stop, get some help call the helpline: 1-800-985-5990 - also contact your doctor with the assessment.",
+      "symptoms": [
+        "Use of recreational drugs or alcohol",
+        "Avoiding social situations and friends",
+        "difficulty percieving reality hallucinations hallucinating",
+        "excessive worry of fear",
+        "fatigue and sleep problems",
+        "feelins of sadness or isolation",
+        "intense irritability or anger",
+        "Obsession with your physical appearance, weight or eating habits",
+        "mood swings",
+        "problems concentraiting paying attention",
+        "suicidal thoughts or self inflicting inflicted injury",
+        "frequent temper tantrums disobedience or aggression"
       ],
       "severity": "severe"
     },
@@ -325,7 +347,7 @@
         "severe pain",
         "cannot put weight on injured leg",
         "peices of femur breaking through skin and cause bleeding",
-        "bruised thigh",
+        "bruised thigh scars marks",
         "parts of the thigh is swollen",
         "injured leg is shorter then uninjured leg"
       ],
@@ -340,6 +362,7 @@
       "symptoms": [
         "full stomach inable to partake in tasks properly",
         "stomach cramps from eating",
+        "bad cramping after drinking liquids",
         "stomach hurts when moving after eating a big meal",
         "feeling like you are going to vomit",
         "constant runs to the bathroom"
@@ -355,7 +378,7 @@
       "linked_illnesses": "Broken Ankle",
       "symptoms": [
         "mild pain  when applying pressure to affected area of the ankle",
-        "tender to touch very sensitive",
+        "ankle is tender to touch very sensitive",
         "swelling bruising",
         "difficulty when trying to walk"
       ],
@@ -385,7 +408,7 @@
       "common_symptoms": "fever, headache, severe dry cough, intense pain and fatigue, overheating",
       "linked_illnesses": "cold",
       "symptoms": [
-        "fever body is 100degrees",
+        "fever body is 100 degrees",
         "overheating",
         "headache",
         "intense pain and fatigue",
