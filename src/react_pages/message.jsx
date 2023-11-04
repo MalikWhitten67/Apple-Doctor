@@ -431,7 +431,7 @@ export default function Message() {
                               <span className="text-xl capitalize">
                                 {isDoctor
                                   ? currentChat.expand?.user.name[0]
-                                  : currentChat.expand?.user.name[0]}
+                                  : currentChat.expand?.doctor.name[0]}
                               </span>
                             </div>
                           </div>
