@@ -1,0 +1,5 @@
+{
+ "min_confidence":"20",
+ "rated_confidence":"60",
+ "dataset":"./data.json"
+}
