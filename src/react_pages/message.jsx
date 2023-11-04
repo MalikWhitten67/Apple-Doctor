@@ -347,7 +347,7 @@ export default function Message() {
       </dialog>
       <dialog
         ref={chat}
-        className="modal  w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto"
+        className="modal  w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center lg:mx-auto"
       >
         <div className=" bg-white p-3 mb-6 w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto  h-screen rounded overflow-auto">
           <div className="flex   justify-between mb-12 h-12 bg-white z-[999]">
