@@ -32,7 +32,7 @@ export default function Login() {
   return (
     <div>
       {error ? <div className="alert aler-error">{error}</div> : ""}
-      <div className="hero  w-screen  xl:w-[30vw] mt-24 justify-center flex flex-col gap-5 mx-auto">
+      <div className="hero  w-screen  xl:w-[40vw] mt-24 justify-center flex flex-col gap-5 mx-auto">
         <div className=" mb-8 ">
           <h1
             className={`  text-4xl
