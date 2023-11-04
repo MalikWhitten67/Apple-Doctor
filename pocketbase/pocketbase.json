@@ -120,94 +120,6 @@
         "options": {}
     },
     {
-        "id": "t0bw8kyqy50fzxa",
-        "name": "doctors",
-        "type": "auth",
-        "system": false,
-        "schema": [
-            {
-                "system": false,
-                "id": "dn5uzpqg",
-                "name": "name",
-                "type": "text",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "system": false,
-                "id": "1uptguii",
-                "name": "patients",
-                "type": "relation",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {
-                    "collectionId": "_pb_users_auth_",
-                    "cascadeDelete": false,
-                    "minSelect": null,
-                    "maxSelect": 1,
-                    "displayFields": null
-                }
-            },
-            {
-                "system": false,
-                "id": "ozn2pjtm",
-                "name": "rating",
-                "type": "text",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {
-                    "min": null,
-                    "max": null,
-                    "pattern": ""
-                }
-            },
-            {
-                "system": false,
-                "id": "5hscrw4m",
-                "name": "isVerified",
-                "type": "bool",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {}
-            },
-            {
-                "system": false,
-                "id": "6ecjcsyy",
-                "name": "isDoctor",
-                "type": "bool",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {}
-            }
-        ],
-        "indexes": [],
-        "listRule": "",
-        "viewRule": "",
-        "createRule": "",
-        "updateRule": "id  = @request.auth.id",
-        "deleteRule": "id  = @request.auth.id",
-        "options": {
-            "allowEmailAuth": true,
-            "allowOAuth2Auth": true,
-            "allowUsernameAuth": true,
-            "exceptEmailDomains": null,
-            "manageRule": null,
-            "minPasswordLength": 8,
-            "onlyEmailDomains": null,
-            "requireEmail": false
-        }
-    },
-    {
         "id": "_pb_users_auth_",
         "name": "users",
         "type": "auth",
@@ -314,22 +226,6 @@
                     "maxSelect": 1,
                     "displayFields": null
                 }
-            },
-            {
-                "system": false,
-                "id": "2thnjuhl",
-                "name": "messages",
-                "type": "relation",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {
-                    "collectionId": "haomdld22gxqgfk",
-                    "cascadeDelete": false,
-                    "minSelect": null,
-                    "maxSelect": null,
-                    "displayFields": null
-                }
             }
         ],
         "indexes": [
@@ -354,7 +250,7 @@
                 "name": "user",
                 "type": "relation",
                 "required": false,
-                "presentable": false,
+                "presentable": true,
                 "unique": false,
                 "options": {
                     "collectionId": "_pb_users_auth_",
@@ -452,8 +348,52 @@
             },
             {
                 "system": false,
-                "id": "rvsrvrqb",
-                "name": "attatchment_type",
+                "id": "a812ar3l",
+                "name": "seen",
+                "type": "relation",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {
+                    "collectionId": "t0bw8kyqy50fzxa",
+                    "cascadeDelete": false,
+                    "minSelect": null,
+                    "maxSelect": null,
+                    "displayFields": null
+                }
+            },
+            {
+                "system": false,
+                "id": "fkg2oltm",
+                "name": "attatchment_link",
+                "type": "url",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {
+                    "exceptDomains": null,
+                    "onlyDomains": null
+                }
+            }
+        ],
+        "indexes": [],
+        "listRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
+        "viewRule": "",
+        "createRule": "chat.user.id = @request.auth.id || chat.doctor.id = @request.auth.id",
+        "updateRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
+        "deleteRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
+        "options": {}
+    },
+    {
+        "id": "t0bw8kyqy50fzxa",
+        "name": "doctors",
+        "type": "auth",
+        "system": false,
+        "schema": [
+            {
+                "system": false,
+                "id": "dn5uzpqg",
+                "name": "name",
                 "type": "text",
                 "required": false,
                 "presentable": false,
@@ -466,24 +406,8 @@
             },
             {
                 "system": false,
-                "id": "a812ar3l",
-                "name": "doctor_saw",
-                "type": "relation",
-                "required": false,
-                "presentable": false,
-                "unique": false,
-                "options": {
-                    "collectionId": "t0bw8kyqy50fzxa",
-                    "cascadeDelete": false,
-                    "minSelect": null,
-                    "maxSelect": 1,
-                    "displayFields": null
-                }
-            },
-            {
-                "system": false,
-                "id": "xcdygj49",
-                "name": "user_saw",
+                "id": "1uptguii",
+                "name": "patients",
                 "type": "relation",
                 "required": false,
                 "presentable": false,
@@ -495,14 +419,73 @@
                     "maxSelect": 1,
                     "displayFields": null
                 }
+            },
+            {
+                "system": false,
+                "id": "ozn2pjtm",
+                "name": "rating",
+                "type": "text",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {
+                    "min": null,
+                    "max": null,
+                    "pattern": ""
+                }
+            },
+            {
+                "system": false,
+                "id": "5hscrw4m",
+                "name": "isVerified",
+                "type": "bool",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {}
+            },
+            {
+                "system": false,
+                "id": "6ecjcsyy",
+                "name": "isDoctor",
+                "type": "bool",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {}
+            },
+            {
+                "system": false,
+                "id": "jvoolacx",
+                "name": "avatar",
+                "type": "file",
+                "required": false,
+                "presentable": false,
+                "unique": false,
+                "options": {
+                    "maxSelect": 1,
+                    "maxSize": 5242880,
+                    "mimeTypes": [],
+                    "thumbs": [],
+                    "protected": false
+                }
             }
         ],
         "indexes": [],
-        "listRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
+        "listRule": "",
         "viewRule": "",
-        "createRule": "chat.user.id = @request.auth.id || chat.doctor.id = @request.auth.id",
-        "updateRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
-        "deleteRule": "@request.auth.id = user.id || @request.auth.id = doctor.id",
-        "options": {}
+        "createRule": "",
+        "updateRule": "id  = @request.auth.id",
+        "deleteRule": "id  = @request.auth.id",
+        "options": {
+            "allowEmailAuth": true,
+            "allowOAuth2Auth": true,
+            "allowUsernameAuth": true,
+            "exceptEmailDomains": null,
+            "manageRule": null,
+            "minPasswordLength": 8,
+            "onlyEmailDomains": null,
+            "requireEmail": false
+        }
     }
 ]
