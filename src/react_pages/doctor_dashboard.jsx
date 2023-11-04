@@ -41,7 +41,7 @@ export default function Dashboard() {
     }
     if (!isIndex) {
       api
-        .collection("users")
+        .collection("doctors")
         .getFirstListItem(
           search?.includes("@") ? `email="${search}"` : `name~"${search}"`,
         )
@@ -147,8 +147,8 @@ export default function Dashboard() {
     await getChat(true).then((i) => {
       if (!i) return;
       let l_data = {
-        doctor: searched.id,
-        user: api.authStore.model.id,
+        doctor: api.authStore.model.id,
+        user: searched.id,
         message: content,
         sent_by: api.authStore.model.id,
         chat: i.id,
