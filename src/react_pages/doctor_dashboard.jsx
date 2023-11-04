@@ -41,7 +41,7 @@ export default function Dashboard() {
     }
     if (!isIndex) {
       api
-        .collection("doctors")
+        .collection("users")
         .getFirstListItem(
           search?.includes("@") ? `email="${search}"` : `name~"${search}"`,
         )
