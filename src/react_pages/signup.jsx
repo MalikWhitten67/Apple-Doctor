@@ -93,22 +93,21 @@ export default function Register() {
         </div>
       ) : null}
 
-      <div className="hero  w-screen  xl:w-[30vw] mt-24 justify-center flex flex-col gap-5 mx-auto">
-        <div className=" mb-8 ">
+      <div className="hero  w-screen  xl:w-[40vw] mt-24 justify-center flex flex-col gap-5 mx-auto">
+        <div className="flex flex-col gap-5 mx-auto  w-5/6 justify-center">
           <h1
-            className={` text-2xl 
+            className={` text-4xl 
             ${
               document.documentElement.getAttribute("data-theme") === "black"
                 ? "text-white"
                 : "text-black"
             }
-            font-bold  mx-auto  w-[85vw] justify-center`}
+            font-bold  mx-auto  `}
           >
             Join <span className="text-blue-500">Apple Doc</span> - To enhance
             your {isDoctor ? `patient's` : ``} experience!
           </h1>
-        </div>
-        <div className="flex flex-col gap-5 mx-auto  w-5/6 justify-center">
+
           <input
             onChange={(e) =>
               setregisterData({ ...registerData, name: e.target.value })
