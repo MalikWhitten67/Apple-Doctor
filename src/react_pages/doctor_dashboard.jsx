@@ -41,7 +41,7 @@ export default function Dashboard() {
     }
     if (!isIndex) {
       api
-        .collection(api.authStore.model?.isDoctor ? "users" : "doctors")
+        .collection("users")
         .getFirstListItem(
           search?.includes("@") ? `email="${search}"` : `name~"${search}"`,
         )

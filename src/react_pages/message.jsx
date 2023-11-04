@@ -165,7 +165,7 @@ export default function Message() {
   }
   return (
     <div className=" w-full h-full">
-      <div className="navbar bg-base-100 w-full xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
+      <div className="navbar bg-base-100 w-full xl:w-[40vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center lg:mx-auto">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-xl pointer-events-none">
             Chat
@@ -194,6 +194,7 @@ export default function Message() {
       <div className="flex relative flex-col gap-5  p-2   w-full mt-4 xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
         {chats.length > 0 && !loading ? (
           chats.map((chat) => {
+            console.log(chat)
             return (
               <div
                 key={chat.id}
