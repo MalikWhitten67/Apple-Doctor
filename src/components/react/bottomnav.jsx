@@ -4,7 +4,7 @@ export default function Bottomnav() {
   return (
     <div
       className="justify-center mx-auto fixed bottom-0 inset-x-0  z-[999] 
-    w-full   p-2 mt-8 xl:w-[30vw] xl:mx-auto xl:justify-center lg:w-[30vw] lg:mx-auto lg:justify-center
+    w-full   p-2 mt-8 xl:w-[40vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center  
     flex flex-col"
     >
       <ul className="menu flex justify-between font-bold menu-horizontal   w-full  ">

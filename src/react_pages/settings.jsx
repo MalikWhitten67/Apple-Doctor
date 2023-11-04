@@ -29,7 +29,7 @@ export default function Index() {
       });
   }
   return (
-    <div className=" p-2 font-sans mt-8 xl:w-[30vw] xl:mt-24 xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto">
+    <div className=" p-2 font-sans mt-8 xl:w-[40vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center lg:mx-auto ">
       <div className="card card-compact  border border-slate-200 bg-base-100 shadow-xl">
         <figure className="flex justify-center mx-auto ">
           <div className=" mt-8 flex flex-col">

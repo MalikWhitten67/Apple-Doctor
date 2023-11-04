@@ -2,7 +2,7 @@ import { api } from "../../react_pages";
 
 export default function Nav() {
   return (
-    <div className="navbar xl:w-[30vw] xl:mx-auto xl:justify-center lg:w-[30vw] lg:mx-auto lg:justify-center bg-base-100">
+    <div className="navbar xl:w-[40vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center lg:mx-auto  bg-base-100">
       <div className="flex-1">
         <a className=" mx-2 normal-case text-xl">
           <span className="text-blue-500 font-bold">

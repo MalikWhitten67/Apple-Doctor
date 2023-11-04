@@ -164,7 +164,7 @@ export default function Dashboard() {
     });
   }
   return (
-    <div className=" p-2 font-sans xl:w-[30vw] xl:justify-center xl:mx-auto lg:w-[30vw] lg:justify-center lg:mx-auto ">
+    <div className=" p-2 font-sans xl:w-[40vw] xl:justify-center xl:mx-auto lg:w-[40vw] lg:justify-center lg:mx-auto  ">
       <Nav />
 
       <div className="mt-8 mb-16">
