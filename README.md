@@ -53,9 +53,11 @@ npm i
    - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command || you can use [Pockethost](https://pockethost.io) which can host it for free on their servers
      
     - To start the server run the following in terminal either windows or linux:
-       ```bash
+
+    ```bash
      pocketbase serve
      ```
+    
    - goto [admin panel](http://127.0.0.1:8090/_/) || `https://your_pockethost_api_route.pockethost.io/_/` - and finish installment
  
     
