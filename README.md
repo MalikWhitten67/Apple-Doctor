@@ -35,6 +35,8 @@ npm i
      ```
   - or if using [replit](https://replit.com/@MALIKWhitten/Apple-Doctor-backend) then refer to secrets -> click the three dots next to api_key and replace it with your own
     ![Replit](https://github.com/MalikWhitten67/Apple-Doctor/assets/65188863/9a75d59b-6884-40fe-bd23-9a002eb09512)
+    Skip the next few if you are using replit
+    
   - Download the dataset from branch backend and then create a config.json file in the main dir where server.js is located
   ```json
   {
@@ -45,6 +47,7 @@ npm i
   ```
   - Now you can run server.js which sets up all endpoints
   - You can check the status of the model on the [status page](http://127.0.0.1:3000/status)
+  - When you get to the frontend portion be sure to swap the api url for analyzing requests with yours! 
     
 * Database
    - Pretty simple go to [pocketbase website](https://pocketbase.com) download the latest version run the following command || you can use [Pockethost](https://pockethost.io) which can host it for free on their servers
@@ -52,14 +55,19 @@ npm i
      ```bash
      pocketbase serve
      ```
-   - goto [admin panel](http://127.0.0.1:8090/_/) - and finish installment
-   - Swap the api url in the index.jsx file to yours
+   - goto [admin panel](http://127.0.0.1:8090/_/) || `https://your_pockethost_api_route.pockethost.io/_/` - and finish installment
+ 
+    
    - Now that you have an database swap to backend branch go into pocketbase folder and download the schema
    - Go back to your panel - then settings and under import collections either click to upload the file or copy and paste
-  * Run the frontend
-    Download the code and do the following
-  Now in index.jsx replace the current baseUrl with yours
-   - Your done! that was easy now we need to just run the frontend
+     
+* Run the frontend
+    - Download the code and do the following
+    - Swap the api route to your url
+      - ```js
+     const api = new Pocketbase(`https://replace_with_url/`) // do not include /_/ or /api just the base route `https://route`
+     ```
+    - Your done! that was easy now we need to just run the frontend
      
     ```bash
      npm run dev
