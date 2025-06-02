@@ -2,7 +2,7 @@
 
 Apple doctor is an ai revolved app made to simplify self analysis - and workflow management,  communicating between doctors and patients
 
-- Made by a mark cuban ai camp student.
+- Made by a mark cuban ai camp student aka me!!!.
 
 ### Tech Stack
 
